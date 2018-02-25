@@ -133,20 +133,20 @@ function EditarNota() {
 function GuardarNota() {
 	ValidarNota();
 	$('.Nota').attr('contenteditable', false);
-}
+};
 
 function ValidarNota() {
 	$(".Nota").each(function () {
 		var nota = $(this).html();
 		nota = nota.trim();
-		if (nota.length != 1 && nota.length != 2 && nota.length != 3 || nota > 100 || nota < 0) {
+		if (nota.length < 1 || nota.length > 3 || nota > 100 || nota < 0 || /^[0-9]*$/i.test(nota) == false) {
 			alert('La nota: ' + nota + ' no es valida.');
 			$(this).html(85);
 		}else{
 			alert('La nota fue cambiada satisfactoriamente');
 		}
 	})
-}
+};
 
 
 
