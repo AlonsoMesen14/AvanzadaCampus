@@ -31,7 +31,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-user"></span> Curso</a>
+          <span class="fa fa-user"></span> Curso</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,16 +44,16 @@
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Curso
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="Registro.html">Agregar</a>
+                <a href="Curso.html">Agregar</a>
               </li>
               <li role="separator" class="divider"></li>
               <li>
-                <a href="Editar_Registro.html">Editar</a>
+                <a href="Editar_Curso.html">Editar</a>
               </li>
               <li role="separator" class="divider"></li>
               <li>
@@ -133,18 +133,13 @@
                 <option value="Carrera0008">Carrera0008</option>
               </select>
             </div>
-            <div class="col-md-6">
-              <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
+             <div class="col-md-6">
+              <label class="color_label_registro" for="curso">Curso</label>
               <select class="form-control">
-                <option selected>Seleccione el requisito del curso</option>
-                <option value="Req0001">Req0001</option>
-                <option value="Req0002">Req0002</option>
-                <option value="Req0003">Req0003</option>
-                <option value="Req0004">Req0004</option>
-                <option value="Req0005">Req0005</option>
-                <option value="Req0006">Req0006</option>
-                <option value="Req0007">Req0007</option>
-                <option value="Req0008">Req0008</option>
+                <option selected>Seleccione el curso</option>
+                <option value="Curso001">Curso001</option>
+                <option value="Curso002">Curso002</option>
+                <option value="Curso002">Curso003</option>
               </select>
             </div>
             <div class="form-group">
@@ -153,25 +148,10 @@
                 <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled="true">
               </div>
             </div>
-
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
-                <input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required="true">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" for="Creditos">Créditos</label>
-                <input name="Creditos" class="form-control" placeholder="0" type="number" required="true">
-              </div>
-            </div>
-
         </fieldset>
 
         <button type="submit" class="btn btn-dark btn-lg btn_registrar">Eliminar
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          <span class="fa fa-trash" aria-hidden="true"></span>
         </button>
 
       </form>

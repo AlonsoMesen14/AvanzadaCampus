@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./estilos.css">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./validaciones.js"></script>
-
-
+  <link rel="stylesheet" type="text/css" href="./estilos.css">
 </head>
 
 
@@ -31,7 +31,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <span class="fa fa-user"></span> Curso </a>
+          <span class="fa fa-user"></span> Grupos</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,20 +44,20 @@
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Curso
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grupos
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="#">Agregar</a>
+                <a href="Grupos.html">Agregar</a>
               </li>
               <li role="separator" class="divider"></li>
               <li>
-                <a href="Editar_Curso.html">Editar</a>
+                <a href="Editar_Grupos.html">Editar</a>
               </li>
               <li role="separator" class="divider"></li>
               <li>
-                <a href="Eliminar_Curso.html">Eliminar</a>
+                <a href="#">Eliminar</a>
               </li>
 
             </ul>
@@ -74,6 +74,9 @@
 
 
 </header>
+
+
+<!--Modal con la asistencia tecnica-->
 
 <!-- Modal -->
 <div class="modal fade" id="Asistencia" role="dialog">
@@ -106,10 +109,9 @@
   </div>
 </div>
 
-<body class="body_Curso">
+<body class="body_Grupos">
 
-  <section class="color_label_Curso">
-
+  <section class="color_label_registro">
 
     <div id="wrapper" class="container">
 
@@ -117,77 +119,29 @@
 
         <fieldset>
           <div class="form-group">
-            <div class="col-md-6">
-              <label class="color_label_registro" for="IdCarrera">Carrera</label>
-              <select class="form-control">
-                <option selected>Seleccione la Carrera</option>
-                <option value="Carrera0001">Carrera0001</option>
-                <option value="Carrera0002">Carrera0002</option>
-                <option value="Carrera0003">Carrera0003</option>
-                <option value="Carrera0004">Carrera0004</option>
-                <option value="Carrera0005">Carrera0005</option>
-                <option value="Carrera0006">Carrera0006</option>
-                <option value="Carrera0007">Carrera0007</option>
-                <option value="Carrera0008">Carrera0008</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
-              <select class="form-control">
-                <option selected>Seleccione el requisito del curso</option>
-                <option value="Req0001">Req0001</option>
-                <option value="Req0002">Req0002</option>
-                <option value="Req0003">Req0003</option>
-                <option value="Req0004">Req0004</option>
-                <option value="Req0005">Req0005</option>
-                <option value="Req0006">Req0006</option>
-                <option value="Req0007">Req0007</option>
-                <option value="Req0008">Req0008</option>
-              </select>
-            </div>
             <div class="form-group">
               <div class="col-md-6">
-                <label class="color_label_registro" for="IdCurso">Código de Curso</label>
-                <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled="true">
+                <label class="color_label_registro">Código de Grupos</label>
+                <input name="IdGrupos" id="IdGrupos" class="form-control" placeholder="GRUPO00010" type="text" disabled="true">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-6">
-                <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
-                <input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required="true">
+                <label class="color_label_registro">Nombre del Grupos</label>
+                <input name="DesGrupos" id="DesGrupos" class="form-control" placeholder="Grupo 0001" type="text" required>
               </div>
             </div>
-
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" for="Creditos">Créditos</label>
-                <input name="Creditos" class="form-control" placeholder="0" type="number" required="true">
-              </div>
-            </div>
-
         </fieldset>
-        <table class="table color_label_registro " id="productTable">
-          <thead>
-            <tr>
-              <th>Carrera</th>
-              <th>Requisito</th>
-              <th>Cód Curso </th>
-              <th>Nombre Curso</th>
-              <th>Créditos</th>
-            </tr>
-          </thead>
-          <tbody id="productTableBdy">
-          </tbody>
-        </table>
-        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="Validar()">Crear Curso
-          <span class="fa fa-save" aria-hidden="true"></span>
+        <button type="submit" class="btn btn-dark btn-lg btn_registrar">Eliminar
+          <span class="fa fa-trash" aria-hidden="true"></span>
         </button>
+
       </form>
       </div>
+
   </section>
 
 </body>
-
 
 </html>

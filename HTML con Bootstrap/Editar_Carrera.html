@@ -34,7 +34,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-user"></span> Carrera</a>
+          <span class="fa fa-user"></span> Carrera</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -120,12 +120,19 @@
       <form id="form-work" class="" name="form-work" action="#">
         <fieldset>
           <div class="form-group">
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" for="IdCarrera">Código de Carrera</label>
-                <input name="IdCarrera" class="form-control" placeholder="CUR00010" type="text" disabled="true">
-              </div>
-            </div>
+			
+			<div class="form-group">
+				 
+					<div class="col-md-6">
+						<label class="control-label" for="carrera">Código de Carrera</label>
+						  <select class="form-control" name="carrera">
+							  <option selected>Seleccione la carrera</option>
+							  <option value="1">Carrera 01</option>
+							  <option value="2">Carrera 02</option>
+							  <option value="3">Carrera 03</option>
+						  </select>
+					</div>
+				</div>
 
             <div class="form-group">
               <div class="col-md-6">
@@ -141,7 +148,7 @@
       </form>
 
       <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="alert('Analizando')">Guardar Cambios
-        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+        <span class="fa fa-save" aria-hidden="true"></span>
       </button>
 
     </div>

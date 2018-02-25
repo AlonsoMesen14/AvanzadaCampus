@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-user"></span> Carrera</a>
+      <a class="navbar-brand" href="#"><span class="fa fa-user"></span> Carrera</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,7 +92,7 @@
 
 <body class="body_Carrera">
 
-<section class="color_label_Carrera">
+<section class="color_label_registro">
 
 <div id="wrapper" class="container">
   
@@ -100,102 +100,32 @@
      
      <fieldset>
 
-       <div class="form-group">
-            <div class="col-md-6">
-              <label class="control-label" for="carnet">Carne</label>
-              <input name="carnet" class="form-control" placeholder="201801110256" type="number" required="true">
-            </div>
-          </div>      
+       
+	     <div class="form-group">
+			
+			<div class="form-group">
+				 
+					<div class="col-md-6">
+						<label class="control-label" for="carrera">Nombre de Carrera</label>
+						  <select class="form-control" name="carrera">
+							  <option selected>Seleccione la carrera</option>
+							  <option value="1">Carrera 01</option>
+							  <option value="2">Carrera 02</option>
+							  <option value="3">Carrera 03</option>
+						  </select>
+					</div>
+				</div>
 
-        <div class="form-group">
-          <div class="col-md-6">
-            <label class="control-label" for="nome">Nombre</label>
-            <input name="nome" class="form-control" placeholder="Jon" type="text" required="true">
-            </div>
-          </div>
-
-        <div class="form-group">
-            <div class="col-md-6">
-              <label class="control-label" for="surname">Apellido</label>
-              <input name="surname" class="form-control" placeholder="Doe" type="text" required="true">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6">
-              <label class="control-label" for="tel">Telefono</label>
-              <div class="input-group">
-                <span class="input-group-addon">+506</span>
-                <input name="tel" class="form-control" placeholder="12345678" type="number" required="true">
+            <div class="form-group">
+              <div class="col-md-6">
+                <label class="color_label_registro" for="DesCarrera">Codigo del Carrera</label>
+                <input name="DesCarrera" class="form-control" placeholder="Carrera 0001" type="text" disabled="true">
               </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <div class="col-md-6">
-              <label class="control-label" for="mobile">Cedula</label>
-              <div class="input-group">
-                <span class="input-group-addon">ID</span>
-                <input name="mobile" class="form-control" placeholder="000000000" type="number" required="true">
-              </div>
-            </div>
-          </div>
-
-         
-          <div class="form-group">
-          	<div class="col-md-6">
-              <label class="control-label" for="fecha">Fecha nacimiento</label>
-            <input type="date" name="fecha" class="form-control" required="true" required="true">
-          </div>
-      </div>
-        
-          <div class="form-group">
-          <div class="col-md-6">
-          	<label class="control-label" for="correo">Correo</label>
-          	<div class="input-group">  
-          		
-                <span class="input-group-addon">@</span>
-                <input name="correo" class="form-control" placeholder="ejemplo@org.com" type="email" required="true">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6">
-            	 <label class="control-label" for="surname">Sexo</label>
-          <select class="form-control">
-			  <option selected>Seleccione el sexo</option>
-			  <option value="1">Masculino</option>
-			  <option value="2">Femenino</option>
-			  <option value="3">Indefinido</option>
-		  </select>
-		</div>
-	</div>
-
-           <div class="form-group">
-          <div class="col-md-6">
-            <label class="control-label" for="usuario">Usuario</label>
-            <input name="usuario" class="form-control" placeholder="Usuario" type="text" required="true">
-            </div>
-          </div>
-
-        <div class="form-group">
-            <div class="col-md-6">
-              <label class="control-label" for="pass">Contraseña</label>
-              <input name="pass" class="form-control" placeholder="Contraseña" type="password" required="true">
-            </div>
-          </div>
-
-           <div class="form-group">
-          <div class="col-md-6">
-            <label class="control-label" for="repass">Repite Contraseña</label>
-            <input name="repass" class="form-control" placeholder="Repita Contraseña" type="password" required="true">
-            </div>
-          </div>
- 
 </fieldset>
 
-<button type="submit" class="btn btn-dark btn-lg btn_registrar">Eliminar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+<button type="submit" class="btn btn-dark btn-lg btn_registrar">Eliminar <span class="fa fa-trash" aria-hidden="true"></span></button>
 
     </form>
 </div>
