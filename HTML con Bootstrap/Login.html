@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="estilos2.css">
+	<script src="./validaciones.js"></script>
 </head>
 
 
@@ -44,9 +45,13 @@
 
 						<div class="col-md-12 col-sm-12 col-xs-12 last-part">
 							<p>Contraseña olvidada?
-								<a href="#" data-toggle="modal" data-target="#Recuperar"> Recuperarla</a>
+								<a href="#" data-toggle="modal" data-target="#Recuperar" onclick="alerta()"> Recuperarla</a>
 							</p>
 						</div>
+						
+						<div class="alert alert-success" hidden="true" id="alerta"><strong>La contraseña sera enviada al corre registrado en nuestro sistema</strong> 
+						</div>
+
 
 						<button type="button" class="btn btn-default" aria-label="Left Align">
 							<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>

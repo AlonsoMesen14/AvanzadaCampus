@@ -1,5 +1,5 @@
 .carousel{
-margin-top: 20px;
+margin-top: 40px;
 margin-left: 10px;
 }
 .carousel, .carousel-inner > .item > img {
@@ -13,12 +13,11 @@ margin-left: 10px;
 
 
 body { 
-			background-image: url(https://www.jinnah.edu/wp-content/uploads/2014/06/university-background-04.jpg);
-			background-position: center center;
-			background-repeat:  no-repeat;
-			background-attachment: fixed;
-			background-size:  cover;
-			background-color: #999;
-  
+	background-image: url(https://www.jinnah.edu/wp-content/uploads/2014/06/university-background-04.jpg);
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	background-color: #999;
 }
 

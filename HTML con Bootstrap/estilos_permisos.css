@@ -18,10 +18,6 @@
   color: white;
 }
 
-.page-head-image {
-  
-}
-
 label{
 	 font-weight: normal; 
 }
@@ -58,33 +54,3 @@ label{
 
 }
 
-
-
-.permisos {
-
-    border-collapse: collapse;
-    width: 95%;
-    margin-top: 10px;
-}
-
-.permisos td, .permisos th{
-    border: 1px solid #ddd;
-    border-top: 10px;
-    margin-left: 0px;
-    padding: 8px;
-    font-weight: normal; 
-}
-
-.permisos tr:nth-child(even){background-color: #f2f2f2;}
-
-.permisos tr:hover {background-color: #ddd; cursor:pointer;}
-
-.permisos th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #2E64FE;
-    color: white;
-}
-
-.permisos th:hover{background-color: #0B2161;cursor:pointer;}
