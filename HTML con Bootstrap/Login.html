@@ -10,59 +10,66 @@
 </head>
 
 
+
+
 <body class="background_login">
-	<div class="container main-section">
-		<div class="row">
-			<div class="col-md-12 text-center user-login-header">
+	<div class="centrar-login">
+		<div class="container main-section">
+			<div class="row">
+				<div class="col-md-12 text-center user-login-header">
 
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main text-center">
-				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12 user-image-section">
-						<img src="http://www.bizchoiceonline.com/images/RegUser.png" class="image">
-					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12 user-login-box">
-						<div class="form-group">
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="glyphicon glyphicon-user"></i>
-								</span>
-								<input id="email" type="text" class="form-control" name="email" placeholder="Usuario">
-							</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-8 col-xs-12 col-md-offset-4 col-sm-offset-2 login-image-main text-center">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 user-image-section">
+							<img src="http://www.bizchoiceonline.com/images/RegUser.png" class="image">
 						</div>
 
-						<div class="form-group">
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="glyphicon glyphicon-asterisk"></i>
-								</span>
-								<input type="password" class="form-control" placeholder="Password" id="usr">
+						<div class="col-md-12 col-sm-12 col-xs-12 user-login-box">
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-user"></i>
+									</span>
+									<input id="email" type="text" class="form-control" name="email" placeholder="Usuario">
+								</div>
 							</div>
 
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-asterisk"></i>
+									</span>
+									<input type="password" class="form-control" placeholder="Password" id="usr">
+								</div>
+
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12 last-part">
+								<p>Contraseña olvidada?
+									<a href="#" data-toggle="modal" data-target="#Recuperar" onclick="alerta()"> Recuperarla</a>
+								</p>
+							</div>
+
+							<div class="alert alert-success" hidden="true" id="alerta">
+								<strong>La contraseña sera enviada al corre registrado en nuestro sistema</strong>
+							</div>
+
+
+							<button type="button" class="btn btn-default" aria-label="Left Align">
+								<span class="fa fa-sign-in" aria-hidden="true"></span>
+								<a href="Inicio.html" class="btn blue-gradient btn-rounded">Login</a>
+							</button>
+
 						</div>
-
-						<div class="col-md-12 col-sm-12 col-xs-12 last-part">
-							<p>Contraseña olvidada?
-								<a href="#" data-toggle="modal" data-target="#Recuperar" onclick="alerta()"> Recuperarla</a>
-							</p>
-						</div>
-						
-						<div class="alert alert-success" hidden="true" id="alerta"><strong>La contraseña sera enviada al corre registrado en nuestro sistema</strong> 
-						</div>
-
-
-						<button type="button" class="btn btn-default" aria-label="Left Align">
-							<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-							<a href="Inicio.html" class="btn blue-gradient btn-rounded">Login</a>
-						</button>
-
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
 
 </html>
