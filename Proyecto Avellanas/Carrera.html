@@ -119,15 +119,15 @@
           <div class="form-group">
             <div class="form-group">
               <div class="col-md-6">
-                <label class="color_label_registro">Código de Carrera</label>
-                <input name="Código Carrera" id="IdCarrera" class="form-control" placeholder="CARR00010" type="text" required>
+                <label class="color_label_registro" >Código de Carrera</label>
+                <input name="IdCarrera" id="IdCarrera" class="form-control" placeholder="CARR00010" type="text" required>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-6">
-                <label class="color_label_registro">Nombre de la Carrera</label>
-                <input name="Nombre Carrera" id="DesCarrera" class="form-control" placeholder="Carrera 0001" type="text" required>
+                <label class="color_label_registro" >Nombre del Carrera</label>
+                <input name="DesCarrera" id="DesCarrera" class="form-control" placeholder="Carrera 0001" type="text" required>
               </div>
             </div>
 
@@ -143,14 +143,11 @@
           <tbody id="productTableBdy">
           </tbody>
         </table>
-        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="ValidarCarrera()">Crear Carrera
-          <span class="fa fa-save" aria-hidden="true"></span>
+        <button onclick="addCarrera()" class="btn btn-dark btn-lg btn_registrar" > Crear Carrera <span class="fa fa-save" aria-hidden="true"></span></button>
+         
         </button>
       </form>
       </div>
-      </button>
-      </form>
-    </div>
   </section>
 
 </body>

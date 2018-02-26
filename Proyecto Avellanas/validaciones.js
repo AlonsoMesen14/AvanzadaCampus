@@ -189,9 +189,11 @@ $(document).ready(function () {
 			$(this).attr('disabled', 'disabled');
 		})
 		$("input[name='tel']").attr('disabled', 'disabled');
+
 		$("input[type='password']").each(function () {
 			$(this).attr('disabled', 'disabled');
 		})
+
 		$("input[name='correo']").attr('disabled', 'disabled');
 		$("input[name='fecha']").attr('disabled', 'disabled');
 		$("input[name='cedula']").attr('disabled', 'disabled');
@@ -208,11 +210,4 @@ function ValidarGrupo(){
 	ValidarText();
 };
 
-function ValidarCarrera () {
-	ValidarText();
-};
-
-function ValidarEditCarrera () {
-	ValidarText();
-};
 
