@@ -11,7 +11,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 <script src="./validaciones.js"></script>
-
+  <title>Registrar</title>
 
 </head>
 
@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-user"></span> Persona</a>
+      <a class="navbar-brand" href="#"><span class="fa fa-user"></span> Persona</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -128,7 +128,7 @@
               <label class="control-label" for="mobile">Cedula</label>
               <div class="input-group">
                 <span class="input-group-addon">ID</span>
-                <input name="mobile" class="form-control" placeholder="000000000" type="number" required="true">
+                <input name="cedula" class="form-control" placeholder="000000000" type="number" required="true">
               </div>
             </div>
           </div>
@@ -160,9 +160,9 @@
 
           <div class="form-group">
             <div class="col-md-6">
-            	 <label class="control-label" for="surname">Sexo</label>
-          <select class="form-control">
-			  <option selected>Seleccione el sexo</option>
+            	 <label class="control-label" for="sexo">Sexo</label>
+          <select name="sexo" class="form-control">
+			  <option selected value="default">Seleccione el sexo</option>
 			  <option value="1">Masculino</option>
 			  <option value="2">Femenino</option>
 			  <option value="3">Indefinido</option>
@@ -173,10 +173,10 @@
            <div class="form-group">
           <div class="col-md-6">
             <label class="control-label" for="Usuario">Usuario</label>
-            <input name="Usuario" class="form-control" placeholder="Usuario" type="text" required="true">
+            <input name="Usuario" class="form-control" placeholder="Usuario" type="text" disabled required="true">
             </div>
           </div>
-
+<!--
         <div class="form-group">
             <div class="col-md-6">
               <label class="control-label" for="Contraseña">Contraseña</label>
@@ -190,8 +190,8 @@
             <input name="Repita Contraseña" class="form-control" placeholder="Repita Contraseña" type="password" required="true">
             </div>
           </div>
-
-          <!--  <div class="form-group">
+        
+            <div class="form-group">
             <div class="col-md-6">
               
 		      <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -202,7 +202,7 @@
  
 </fieldset>
  
-<button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="Validar()">Registrar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
+<button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="Validar()">Registrar <span class="fa fa-save" aria-hidden="true"></span></button>
     </form>
 </div>
 

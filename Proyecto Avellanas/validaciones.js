@@ -6,6 +6,8 @@ function Validar() {
 	ValidarCorreo();
 	Fecha();
 	VerificarContraseñas();
+	ValidarCedula();
+	ValidarSelect();
 };
 
 
@@ -46,7 +48,7 @@ function ValidarText() {
 function ValidarTel() {
 
 	var tel = $("input[name='Telefono']").val();
-	tel = tel.trim();
+/*	tel = tel.trim();*/
 	if (/^([0-9]{8})$/i.test(tel)) {
 
 	} else {
@@ -72,7 +74,7 @@ function ValidarCorreo() {
 
 
 	var correo = $("input[name='Correo']").val();
-	correo = correo.trim();
+/*	correo = correo.trim();*/
 
 	if (!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i).test(correo)) {
 		alert('Ingrese un Correo Valido');
@@ -146,19 +148,15 @@ function ValidarCarne() {
 		alert('La longitud del carne debe ser de 8 caracteres');
 	} else {
 		Limpiar();
-		$("input[type='text']").each(function () {
+	/*	$("input[type='text']").each(function () {
 			$(this).attr('disabled', 'disabled');
 		})
 		$("input[name='tel']").attr('disabled', 'disabled');
 
-		$("input[type='password']").each(function () {
-			$(this).attr('disabled', 'disabled');
-		})
-
 		$("input[name='correo']").attr('disabled', 'disabled');
 		$("input[name='fecha']").attr('disabled', 'disabled');
 		$("input[name='cedula']").attr('disabled', 'disabled');
-		$("select[name='sexo']").attr('disabled', 'disabled');
+		$("select[name='sexo']").attr('disabled', 'disabled');*/
 	}
 
 }
@@ -217,21 +215,68 @@ function ValidarEditCarrera() {
 };
 
 function ValidaLogin() {
-	var pwd = document.getElementById("usr").value;;
+	var pwd = $("#usr").value;;
 	pwd = pwd.trim();
 
-	var usario = document.getElementById("email").value;;
-	usario = usario.trim();
+	var usuario = $("#email").value;;
+	usuario= usuario.trim();
 
 	//	if (!(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/).test(pwd)) {
 		if (pwd != 'admin') {
 			alert('Clave no coincide');
 			return false;
 		}
-		if (usario != 'admin') {
+	if (usuario != 'admin') {
 			alert('Usuario no coincide');
 			return false;
 		}
 	};
 
+function CambiarContraseña() {
+	var pass1 = $("input[name='Password1']").val().trim();
+	var pass2 = $("input[name='Password2']").val().trim();
+	if (pass1.length <8 || pass2<8) {
+		alert('La longitud de las contraseñas debe ser igual a 8');
+	} else {
+		if (pass1!=pass2) {
+			alert('Las contraseñas no coinciden');
+		} else {
+			alert('La contraseña sera enviada al correo registrado en nuestro sistema');
+			$("input[name='Password1']").val("");
+			$("input[name='Password2']").val("");
+			return true;
+		}
+	}
+	alert('La contraseña no ha sido cambiada, intente de nuevo');
+	$("input[name='Password1']").val("");
+	$("input[name='Password2']").val("");
+}
 
+/*function Validar_Telefono() {
+	var telefono = $("input[name='tel']").val();
+	if (telefono.length<8) {
+		alert('Logintud no valida (8 digitos)');
+		
+	}
+}
+*/
+function Validar_Edicion_Registro(){
+	ValidarText();
+	ValidarCorreo();
+	Fecha();
+	ValidarTel();
+	ValidarCedula();
+}
+
+
+function ValidarCedula() {
+	var cedula = $("input[name='cedula']").val();
+	if(cedula.length<9){
+		alert('Cedula no valida (9 caracteres)');
+	}
+}
+function ValidarSelect() {
+	if ($("select").val() === "default") {
+		alert("Seleccione un valor distinto en el sexo al por defecto");
+	}
+}

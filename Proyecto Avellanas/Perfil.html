@@ -5,17 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="estilos.css">
-	<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="./estilos.css">
+<script src="./validaciones.js"></script>
+  <title>Mi Perfil</title>
 </head>
 
 
@@ -76,6 +74,38 @@
       
     </div>
   </div>
+
+  <div class="modal fade" id="Cambiar_Contraseña" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Cambiar contraseña</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="Password1" class="col-form-label">Contraseña</label>
+              <input type="Password" name="Password1" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Password2" class="col-form-label">Repita contraseña</label>
+              <input type="Password" name="Password2" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="CambiarContraseña()">Cambiar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
 
 
 <body class="body_registro">
@@ -159,18 +189,18 @@
       		  </select>
       		  </div>
 	       </div>
-
+<!--
            <div class="form-group">
             <div class="col-md-6">
               <label class="control-label" for="usuario">Usuario</label>
               <input name="usuario" class="form-control" placeholder="Usuario" type="text" required="true">
             </div>
           </div>
-
+        -->
         <div class="form-group">
             <div class="col-md-6">
               <div class="cambiar_contraseña">
-                <a href="" class=""> Cambiar contraseña</a>
+                <a href="" class="" data-toggle="modal" data-target="#Cambiar_Contraseña"> Cambiar contraseña</a>
               </div>
               
             </div>
