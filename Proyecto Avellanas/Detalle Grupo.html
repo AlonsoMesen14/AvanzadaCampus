@@ -14,6 +14,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./estilos.css">
+  <script src="./validaciones.js"></script>
 
 </head>
 
@@ -113,10 +114,11 @@
 
                     <div class="form-group">
                         <div class="col-md-8">
-                            <label class="control-label" for="correo">Curso:</label>
+                            <label class="control-label" for="">Curso:</label>
 
 
-                            <select class="form-control">
+                            <select required class="form-control">
+								<option selected  value="">Seleccione</option>
                                 <option value="curso1">1</option>
                                 <option value="curso2">2</option>
                                 <option value="curso3">3</option>
@@ -128,7 +130,8 @@
                     <div class="form-group">
                         <div class="col-md-8">
                             <label class="control-label" for="correo">Grupo:</label>
-                            <select class="form-control">
+                            <select required class="form-control">
+								<option value="" selected>Seleccione</option>
                                 <option value="grupo1">1</option>
                                 <option value="grupo2">2</option>
                                 <option value="grupo3">3</option>
@@ -164,13 +167,12 @@
                                 <td>20180001</td>
                                 <td>
                                     
-                                    <select class="color_select">
-                                        <option value="DEfault">Seleccione</option>
+                                    <select class="color_select" required>
+                                        <option selected  value="">Seleccione</option>
                                         <option value="Presente">Presente</option>
                                         <option value="Tarde">Tarde</option>
                                         <option value="Ausente">Ausente</option>
                                         <option value="Ausencia Justificada">Ausencia Justificada</option>
-                                        
                                     </select>
                                     
                                 </td>
@@ -182,8 +184,8 @@
                                 <td>@fat</td>
                                 <td>
                                     
-                                    <select class="color_select">
-                                        <option value="DEfault">Seleccione</option>
+                                    <select required class="color_select">
+                                        <option selected  value="">Seleccione</option>
                                         <option value="Presente">Presente</option>
                                         <option value="Tarde">Tarde</option>
                                         <option value="Ausente">Ausente</option>
@@ -198,8 +200,8 @@
                                     <td>@twitter</td>
                                     <td>
                                         
-                                        <select class="color_select">
-                                            <option value="Default" selected>Seleccione</option>
+                                        <select required class="color_select">
+                                            <option selected value="0" selected>Seleccione</option>
                                             <option value="Presente">Presente</option>
                                             <option value="Tarde">Tarde</option>
                                             <option value="Ausente">Ausente</option>
@@ -213,9 +215,10 @@
                                 
                             </table>
                             
-                        </fieldset>
+                        </fieldset> 
+						<button type="submit"  class="btn btn-dark btn-lg btn_registrar" onclick="ValidarAsistencia()">Guardar</button>
+
                     </form>
-                    <button type="submit" onclick="validar()"class="btn btn-dark btn-lg btn_registrar">Guardar</button>
                 </div>
                             
         </section>

@@ -201,4 +201,13 @@ $(document).ready(function () {
 })
 */
 
+function ValidarAsistencia () {
+	fecha();
+};
+
+function ValidarGrupo(){
+	
+	ValidarText();
+};
+
 
