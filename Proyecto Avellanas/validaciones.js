@@ -1,5 +1,5 @@
 function Validar() {
-	
+
 	ValidarText();
 	ValidarTel();
 	ValidarPass();
@@ -9,28 +9,28 @@ function Validar() {
 };
 
 
-	function addCarrera() {
-		var productTable = document.getElementById("productTable");
-		var rowCount = productTable.rows.length;
-		var row = productTable.insertRow(rowCount);
-		var IdCarrera = row.insertCell(0);
-		var description = row.insertCell(1);
-		var removeButton = row.insertCell(2);
+function addCarrera() {
+	var productTable = document.getElementById("productTable");
+	var rowCount = productTable.rows.length;
+	var row = productTable.insertRow(rowCount);
+	var IdCarrera = row.insertCell(0);
+	var description = row.insertCell(1);
+	var removeButton = row.insertCell(2);
 
 
-		IdCarrera.innerHTML = document.getElementById("IdCarrera").value;
-		description.innerHTML = document.getElementById("DesCarrera").value;
+	IdCarrera.innerHTML = document.getElementById("IdCarrera").value;
+	description.innerHTML = document.getElementById("DesCarrera").value;
 
-		var butt = document.createElement('input');
-		butt.setAttribute('type', 'button');
-		butt.setAttribute('name', 'remove');
-		butt.setAttribute('value', '-');
-		butt.onclick = function () {
-			removeProduct(productTable, this);
-		}
-		//row.cells[3].appendChild(butt);
-
+	var butt = document.createElement('input');
+	butt.setAttribute('type', 'button');
+	butt.setAttribute('name', 'remove');
+	butt.setAttribute('value', '-');
+	butt.onclick = function () {
+		removeProduct(productTable, this);
 	}
+	//row.cells[3].appendChild(butt);
+
+}
 
 function ValidarText() {
 	$("input[type='text']").each(function () {
@@ -85,7 +85,7 @@ function Fecha() {
 
 	if (!(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/).test(dato)) {
 		alert('Ingrese una fecha valida');
-	} 
+	}
 };
 
 
@@ -133,7 +133,7 @@ function ValidarNota() {
 		if (nota.length < 1 || nota.length > 3 || nota > 100 || nota < 0 || /^[0-9]*$/i.test(nota) == false) {
 			alert('La nota: ' + nota + ' no es valida.');
 			$(this).html(85);
-		}else{
+		} else {
 			alert('La nota fue cambiada satisfactoriamente');
 		}
 	})
@@ -144,7 +144,7 @@ function ValidarCarne() {
 
 	if (carne.length != 8) {
 		alert('La longitud del carne debe ser de 8 caracteres');
-	}  else {
+	} else {
 		Limpiar();
 		$("input[type='text']").each(function () {
 			$(this).attr('disabled', 'disabled');
@@ -160,14 +160,14 @@ function ValidarCarne() {
 		$("input[name='cedula']").attr('disabled', 'disabled');
 		$("select[name='sexo']").attr('disabled', 'disabled');
 	}
-	
+
 }
 function Limpiar() {
 	$("input[type='text']").each(function () {
-		$(this).val(""); 
+		$(this).val("");
 	})
 	$("input[type='password']").each(function () {
-		$(this).val(""); 
+		$(this).val("");
 	})
 	$("input[name='correo']").val("");
 	$("input[name='fecha']").val("");
@@ -179,7 +179,7 @@ function Limpiar() {
 function VerificarContraseñas() {
 	var pass1 = $("input[name='Contraseña']").val();
 	var pass2 = $("input[name='Repita Contraseña']").val();
-	if (pass1!=pass2) {
+	if (pass1 != pass2) {
 		alert("Las contraseñas no coinciden");
 	}
 }
@@ -189,11 +189,9 @@ $(document).ready(function () {
 			$(this).attr('disabled', 'disabled');
 		})
 		$("input[name='tel']").attr('disabled', 'disabled');
-
 		$("input[type='password']").each(function () {
 			$(this).attr('disabled', 'disabled');
 		})
-
 		$("input[name='correo']").attr('disabled', 'disabled');
 		$("input[name='fecha']").attr('disabled', 'disabled');
 		$("input[name='cedula']").attr('disabled', 'disabled');
@@ -201,13 +199,39 @@ $(document).ready(function () {
 })
 */
 
-function ValidarAsistencia () {
+function ValidarAsistencia() {
 	fecha();
 };
 
-function ValidarGrupo(){
-	
+function ValidarGrupo() {
+
 	ValidarText();
 };
+
+function ValidarCarrera() {
+	ValidarText();
+};
+
+function ValidarEditCarrera() {
+	ValidarText();
+};
+
+function ValidaLogin() {
+	var pwd = document.getElementById("usr").value;;
+	pwd = pwd.trim();
+
+	var usario = document.getElementById("email").value;;
+	usario = usario.trim();
+
+	//	if (!(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/).test(pwd)) {
+		if (pwd != 'admin') {
+			alert('Clave no coincide');
+			return false;
+		}
+		if (usario != 'admin') {
+			alert('Usuario no coincide');
+			return false;
+		}
+	};
 
 
