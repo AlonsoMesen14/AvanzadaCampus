@@ -9,6 +9,9 @@ body {
   
 }
 
+.titulos{
+  text-align: center;
+}
 #wrapper {
   width: 100%;
   max-width: 600px;

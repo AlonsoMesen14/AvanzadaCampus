@@ -37,7 +37,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-list-alt"></span> Matricula</a>
+          <span class="glyphicon glyphicon-list-alt"></span> Prematricula</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,106 +96,120 @@
 
 <body>
   <section class="color_label_registro">
-    <div id="contenido_tabla" class="container">
+     
+    <div class="container">
+        <br />
+        <br />
+         <h3 class="titulos">Prematricula</h3>
+         <hr>     
+      </div>
+      <br />
 
-      <div class="form-group">
-        <h2>Prematricula</h2>
-        <div class="table-responsive">
-          <table class="table">
-            <thead class="thead-inverse">
-              <tr>
-                <th>#</th>
-                <th>Codigo</th>
-                <th>Materia</th>
-                <th>Creditos</th>
-                <th>Requisitos</th>
-                <th>Horario</th>
-                <th>Eliminar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>1</th>
-                <td>BSI-89</td>
-                <td>Base de Datos 1</td>
-                <td>5</td>
-                <td></td>
-                <td>L-6pm:8pm</td>
-                <td>
-                  <button class="btn btn-dark btn-sm btn_boton">
-                    <i class="fa fa-trash-o"></i>
-                  </button>
-                </td>
-              </tr>
-              <th>2</th>
-              <td>BSI-789</td>
-              <td>Calculo 1</td>
-              <td>4</td>
+
+
+
+
+
+  <div id="contenido_tabla" class="container">
+
+    <div class="form-group">
+    
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>#</th>
+              <th>Codigo</th>
+              <th>Materia</th>
+              <th>Creditos</th>
+              <th>Requisitos</th>
+              <th>Horario</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>BSI-89</td>
+              <td>Base de Datos 1</td>
+              <td>5</td>
               <td></td>
-              <td>V-10am:1pm</td>
+              <td>L-6pm:8pm</td>
               <td>
                 <button class="btn btn-dark btn-sm btn_boton">
                   <i class="fa fa-trash-o"></i>
                 </button>
               </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <button type="button" class="btn btn-dark btn-lg btn_registrar" data-toggle="modal" data-target="#myModal">Matricular</button>
-        <a href="Matri.html" class="btn btn-dark btn-lg btn_registrar">Regresar</a>
+            </tr>
+            <th>2</th>
+            <td>BSI-789</td>
+            <td>Calculo 1</td>
+            <td>4</td>
+            <td></td>
+            <td>V-10am:1pm</td>
+            <td>
+              <button class="btn btn-dark btn-sm btn_boton">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <button type="button" class="btn btn-dark btn-lg btn_registrar" data-toggle="modal" data-target="#myModal">Matricular</button>
+      <a href="Matri.html" class="btn btn-dark btn-lg btn_registrar">Regresar</a>
     </div>
-  </section>
+  </div>
+</section>
 </body>
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <!-- Contenido Modal-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Matricula</h4>
-              </div>
-              <div class="modal-body">
-                <h4>Precio Matricula: $240 </h4>
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>Codigo</th>
-                        <th>Materia</th>
-                        <th>Creditos</th>
-                        <th>Precio</th>
-                        <th>Descuento</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>BSI-89</td>
-                        <td>Base de Datos 1</td>
-                        <td>4</td>
-                        <td>$350</td>
-                        <td>0%</td>
-                      </tr>
-                      <tr>
-                        <td>BSI-789</td>
-                        <td>Calculo 1</td>
-                        <td>4</td>
-                        <td>$300</td>
-                        <td>0%</td>
-                      </tr>
-                      <tr>
-                        <th> Total</th>
-                        <td colspan="4">$890</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Confirmar</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Contenido Modal-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Matricula</h4>
+            </div>
+            <div class="modal-body">
+              <h4>Precio Matricula: $240 </h4>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Codigo</th>
+                      <th>Materia</th>
+                      <th>Creditos</th>
+                      <th>Precio</th>
+                      <th>Descuento</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>BSI-89</td>
+                      <td>Base de Datos 1</td>
+                      <td>4</td>
+                      <td>$350</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td>BSI-789</td>
+                      <td>Calculo 1</td>
+                      <td>4</td>
+                      <td>$300</td>
+                      <td>0%</td>
+                    </tr>
+                    <tr>
+                      <th> Total</th>
+                      <td colspan="4">$890</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Confirmar</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
+      </div>
 </html>
