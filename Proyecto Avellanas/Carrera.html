@@ -12,7 +12,7 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="./validaciones.js"></script>
-<title>Carrera</title>
+  <title>Carrera</title>
 
 </head>
 
@@ -38,7 +38,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a href="Inicio.html"> <span class="fa fa-home"></span> Inicio
+            <a href="Inicio.html">
+              <span class="fa fa-home"></span> Inicio
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -108,49 +109,59 @@
 
 <body class="body_Carrera">
 
-    <section class="color_label_registro">
+  <section class="color_label_registro">
 
 
     <div class="container">
-        <br />
-        <br />
-        <h3 class="titulos">Carreras</h3>
-        <hr>
+      <br />
+      <br />
+      <h3 class="titulos">Crear Carrera</h3>
+      <hr>
+    </div>
+
+    <div class="container">
+
       <form id="form-work" class="" name="form-work" action="#">
 
         <fieldset>
           <div class="form-group">
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" >Código de Carrera</label>
+            <div class="row">
+              <div class="col-md-offset-2 col-md-4">
+                <label class="color_label_registro">Código de Carrera</label>
                 <input name="IdCarrera" id="IdCarrera" class="form-control" placeholder="CARR00010" type="text" required>
               </div>
-            </div>
 
-            <div class="form-group">
-              <div class="col-md-6">
-                <label class="color_label_registro" >Nombre del Carrera</label>
+              <div class="col-md-4">
+                <label class="color_label_registro">Nombre del Carrera</label>
                 <input name="DesCarrera" id="DesCarrera" class="form-control" placeholder="Carrera 0001" type="text" required>
               </div>
             </div>
-
+          </div>
 
         </fieldset>
-        <table class="table color_label_registro " id="productTable">
-          <thead>
-            <tr>
-              <th>Código Carrera</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody id="productTableBdy">
-          </tbody>
-        </table>
-        <button onclick="addCarrera()" class="btn btn-dark btn-lg btn_registrar" > Crear Carrera <span class="fa fa-save" aria-hidden="true"></span></button>
-         
-        </button>
+        <br>
+        <div id="contenido_tabla" class="container">
+          <div class="form-group">
+
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Código Carrera</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody id="productTableBdy">
+                </tbody>
+              </table>
+              <button onclick="addCarrera()" class="btn btn-dark btn-lg btn_registrar"> Crear Carrera
+                <span class="fa fa-save" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
       </form>
-      </div>
+    </div>
   </section>
 
 </body>
