@@ -1,0 +1,217 @@
+﻿@model Avanzada.ViewModel.GrupoViewModel.IndexViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Title;
+
+
+}
+
+<header>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="fa fa-user"></span> <span class="fa fa-user"></span> Grupos
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="Inicio.html">
+                            Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Grupos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Agregar</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="Editar_Grupos.html">Editar</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="Eliminar_Grupos.html">Eliminar</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#Asistencia">Asistencia Tecnica</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="Asistencia" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pongase en contacto con nosotros</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Identificacion</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Corta Descripcion:</label>
+                        <input type="textarea" name="" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('Pronto nos pondremos en contacto con usted')">Enviar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<body class="body_Grupos">
+
+    <section class="color_label">
+
+        <div id="wrapper" class="container">
+
+            <form id="form-work" class="" name="form-work" action="#">
+
+                <fieldset>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label class="color_label_registro">Código de Grupo</label>
+                                <input name="IdGrupos" id="IdGrupos" class="form-control" placeholder="GRUPO00010" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label class="color_label_registro">Nombre del Grupo</label>
+                                <input name="DesGrupos" id="DesGrupos" class="form-control" placeholder="Grupo 0001" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="color_label_registro" for="IdCarrera">Carrera</label>
+                            <select class="form-control" required>
+                                <option value="" selected>Seleccione la Carrera</option>
+
+                                @foreach (var grupo in Model.Grupo)
+                                {
+
+                                    <option value="" selected>@grupo.IdCarrera</option>
+                                }
+
+                               
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="color_label_registro" for="IdCurso">Curso</label>
+                            <select class="form-control" id="IdCurso" required>
+
+                                <option value="" selected>Seleccione el curso</option>
+
+                                @foreach (var grupo in Model.Grupo)
+    {
+
+                            <option value="" selected>@grupo.IdCurso</option>
+}
+
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="color_label_registro" for="IdHorario">Horario</label>
+                            <select class="form-control" id="IdHorario" required>
+                                <option value="" selected>Seleccione el horario</option>
+
+                                @foreach (var grupo in Model.Grupo)
+                                    {
+
+                                        <option value="" selected>@grupo.IdHorario</option>
+                                    }
+
+                            </select>
+                        </div>
+
+
+                </fieldset>
+                <table class="table color_label_registro " id="groupTable">
+                    <thead>
+                        @*@foreach (var grupo in Model.Grupo)
+                            {
+                                <tr>
+                                    <td>@grupo.IdHorario</td>
+                                    <td>@grupo.IdCarrera</td>
+                                    <td>@grupo.Descripcion</td>
+                                </tr>
+                            }*@
+                    </thead>
+                    <tbody id="groupTableBdy"></tbody>
+                </table>
+
+
+                @*<table>
+                                        <thead>
+                                            <tr>
+                                                <th>Horario</th>
+                                                <th>Carrera</th>
+                                                <th>Descripcion</th>
+                                            </tr>
+
+
+                                        </thead>
+
+                                        @foreach (var grupo in Model.Grupo)
+                            {
+                                <tr>
+                                    <td>@grupo.IdHorario</td>
+                                    <td>@grupo.IdCarrera</td>
+                                    <td>@grupo.Descripcion</td>
+
+                                </tr>
+                    }
+
+                                    </table>*@
+
+
+                <button onclick="ValidarGrupo()" class="btn btn-dark btn-lg btn_registrar">
+                    Crear Grupo
+                    <span class="fa fa-save" aria-hidden="true"></span>
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
