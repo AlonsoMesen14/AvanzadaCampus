@@ -1,14 +1,14 @@
-function Validar() {
+//function Validar() {
 
-	ValidarText();
-	ValidarTel();
-	ValidarPass();
-	ValidarCorreo();
-	Fecha();
-	VerificarContraseñas();
-	ValidarCedula();
-	ValidarSelect();
-};
+//	ValidarText();
+//	ValidarTel();
+//	ValidarPass();
+//	ValidarCorreo();
+//	Fecha();
+//	VerificarContraseñas();
+//	ValidarCedula();
+//	ValidarSelect();
+//};
 
 
 function addCarrera() {

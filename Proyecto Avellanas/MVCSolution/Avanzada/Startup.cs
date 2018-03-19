@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Avanzada.Models.PatternRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,7 @@ namespace Avanzada
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IRepositorioPersona, Estructura>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +37,7 @@ namespace Avanzada
                 name: "Avellanas",
                 template: "{controller}/{action}/{id?}",
                 //indica la vista la cual sera cargada por defecto (cuand se inicia la app) 
-                defaults: new { controller = "Grupo", action = "Index" }
+                defaults: new { controller = "Persona", action = "Crear" }
                 ));
         }
     }

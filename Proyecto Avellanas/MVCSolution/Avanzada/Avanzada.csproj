@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Persona\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\Grupos.html" />
   </ItemGroup>
 

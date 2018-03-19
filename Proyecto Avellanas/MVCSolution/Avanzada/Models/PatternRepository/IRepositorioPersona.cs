@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    interface IRepositorioPersona
+     public interface IRepositorioPersona
     {
+        List<Persona> ObtenerPersona();
+        bool CrearPersona(Persona persona);
+        bool EditarPersona(Persona persona);
+        bool ExistePersona(int id);
+
     }
 }
