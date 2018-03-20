@@ -22,6 +22,53 @@ namespace Avanzada.Controllers
             repopersona = _repositorio;
         }
 
+
+        public IActionResult Eliminar()
+        {
+
+            EliminarViewModel modelo = new EliminarViewModel();
+            modelo.Title = "Eliminar Persona";
+            modelo.Sexo = new List<SelectListItem>();
+            foreach (var valor in Enum.GetValues(typeof(Persona.Sexualidad)))
+            {
+                modelo.Sexo.Add(new SelectListItem
+                {
+                    Value = valor.ToString(),
+                    Text = Enum.GetName(typeof(Persona.Sexualidad), valor)
+                });
+            }
+            return View(modelo);
+        }
+
+
+        [HttpPost]
+        public IActionResult Eliminar(EliminarViewModel modelo)
+        {
+            if (!ModelState.IsValid || repopersona.ExistePersona(modelo.Cedula))
+            {
+                if (repopersona.ExistePersona(modelo.Cedula))
+                {
+                    modelo.ExistePersona = true;
+                }
+                modelo.Sexo = new List<SelectListItem>();
+                foreach (var valor in Enum.GetValues(typeof(Persona.Sexualidad)))
+                {
+                    modelo.Sexo.Add(new SelectListItem
+                    {
+                        Value = valor.ToString(),
+                        Text = Enum.GetName(typeof(Persona.Sexualidad), valor)
+                    });
+                }
+                return View(modelo);
+            }
+            repopersona.EliminarPersona(
+                modelo.Carne);
+
+            return RedirectToAction("Crear");
+        }
+
+
+
         public IActionResult Editar() {
 
             EditarViewModel modelo = new EditarViewModel();

@@ -96,5 +96,14 @@ namespace Avanzada.Models.PatternRepository
         {
             return personas.Any(a => a.Carne == carne);
         }
+
+
+        public bool EliminarPersona(int id)
+        {
+            if (ExistePersona(id)) {
+                return true;
+            }
+            return false;
+        }
     }
 }

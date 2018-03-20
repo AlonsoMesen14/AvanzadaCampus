@@ -37,7 +37,7 @@ namespace Avanzada
                 name: "Avellanas",
                 template: "{controller}/{action}/{id?}",
                 //indica la vista la cual sera cargada por defecto (cuand se inicia la app) 
-                defaults: new { controller = "Persona", action = "Crear" }
+                defaults: new { controller = "Persona", action = "Eliminar" }
                 ));
         }
     }

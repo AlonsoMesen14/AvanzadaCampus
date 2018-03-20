@@ -11,6 +11,7 @@ namespace Avanzada.Models.PatternRepository
         bool CrearPersona(Persona persona);
         bool EditarPersona(Persona persona);
         bool ExistePersona(int id);
+        bool EliminarPersona(int id);
 
     }
 }
