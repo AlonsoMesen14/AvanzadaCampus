@@ -1,0 +1,131 @@
+﻿@model Avanzada.ViewModel.MatriViewModel.IndexViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Title;
+}
+
+<header>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-list-alt"></span> Matricula</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="Inicio.html">
+                            <span class="fa fa-home"></span> Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#" data-toggle="modal" data-target="#Asistencia">Asistencia Tecnica</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+</header>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="Asistencia" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pongase en contacto con nosotros</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Identificacion</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Corta Descripcion:</label>
+                        <input type="textarea" name="" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('Pronto nos pondremos en contacto con usted')">Enviar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<body>
+    <section class="color_label_registro">
+        <div class="container">
+         
+            <h3 class="titulos">Matricula</h3>
+            <hr>
+            <h5> Cantidad Maxima de Creditos :20 </h5>
+            <h5> Matricula $240 </h5>
+            <h5> Sus creditos: </h5>
+            <a href="Prematri.html" class="btn btn-dark btn-xl btn_registrar">Ver Prematricula</a>
+
+        </div>
+        <br />
+
+
+
+        <div id="contenido_tabla" class="container">
+            <div class="form-group">
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>#</th>
+                                <th>Codigo</th>
+                                <th>Materia</th>
+                                <th>Creditos</th>
+                                <th>Requisitos</th>
+                                <th>Matricular</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>BSI-456</td>
+                                <td>Programacion Avanzada</td>
+                                <td>5</td>
+                                <td>BSI-223</td>
+                                <td> <button class="btn btn-dark btn-sm btn_boton"><i class="fa fa-plus"></i></button></td>
+                            </tr>
+                        <th>2</th>
+                        <td>BSI-555</td>
+                        <td>Ingles 1</td>
+                        <td>3</td>
+                        <td></td>
+                        <td> <button class="btn btn-dark btn-sm btn_boton"><i class="fa fa-plus"></i></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+</body>

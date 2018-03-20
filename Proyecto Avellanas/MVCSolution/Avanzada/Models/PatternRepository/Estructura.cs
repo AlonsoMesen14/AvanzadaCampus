@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
@@ -95,6 +95,21 @@ namespace Avanzada.Models.PatternRepository
         public bool ExistePersonaCarne(int carne)
         {
             return personas.Any(a => a.Carne == carne);
+        }
+
+        public List<Rubros> ObtenerRubros()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Matricula> ObtenerMatricula()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<PreMatricula> ObtenerPreMatricula()
+        {
+            throw new NotImplementedException();
         }
     }
 }
