@@ -55,7 +55,7 @@ namespace Avanzada.Models.PatternRepository
                 //encuentre la posicio de la persona
                 var index = personas.FindIndex(e => (e.Carne == persona.Carne));
                 personas.RemoveAt(index);
-                personas.Add(a); 
+                personas.Add(a);
                 return true;
             }
             return false;
@@ -97,12 +97,20 @@ namespace Avanzada.Models.PatternRepository
             return personas.Any(a => a.Carne == carne);
         }
 
+        public Persona BuscarPersona(int id)
+        {
+            return personas.Find(p => p.Carne == id);
+        }
+
         public bool EliminarPersona(int id)
         {
-            if (ExistePersona(id)) {
+            if (ExistePersona(id))
+            {
+                personas.Remove( personas.Find( p => p.Cedula == id));
                 return true;
             }
             return false;
+        }
 
         public List<Rubros> ObtenerRubros()
         {
@@ -118,5 +126,7 @@ namespace Avanzada.Models.PatternRepository
         {
             throw new NotImplementedException();
         }
+
+     
     }
 }

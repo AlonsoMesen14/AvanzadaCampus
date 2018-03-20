@@ -23,6 +23,65 @@ namespace Avanzada.Controllers
         }
 
 
+        //public IActionResult VerPersona()
+        //{
+
+        //    EliminarViewModel modelo = new EliminarViewModel();
+        //    modelo.Title = "Eliminar Persona";
+        //    modelo.Sexo = new List<SelectListItem>();
+
+        //    foreach (var valor in Enum.GetValues(typeof(Persona.Sexualidad)))
+        //    {
+        //        modelo.Sexo.Add(new SelectListItem
+        //        {
+        //            Value = valor.ToString(),
+        //            Text = Enum.GetName(typeof(Persona.Sexualidad), valor)
+        //        });
+        //    }
+
+        //    Persona p = repopersona.BuscarPersona(modelo.Carne);
+
+        //    if (p != null) {
+
+        //        modelo.Nombre = p.Nombre;
+        //        modelo.Apellido = p.Apellido;
+        //        modelo.Telefono = p.Telefono;
+        //        modelo.Usuario = p.Usuario;
+        //        modelo.Contraseña = p.Contraseña;
+        //        modelo.Correo = p.Correo;
+        //    }
+        //    return View(modelo);
+        //}
+
+
+        //[HttpPost]
+        //public IActionResult VerPersona(EliminarViewModel modelo)
+        //{
+        //    if (!ModelState.IsValid || repopersona.ExistePersona(modelo.Cedula))
+        //    {
+        //        if (repopersona.ExistePersona(modelo.Cedula))
+        //        {
+        //            modelo.ExistePersona = true;
+        //        }
+        //        modelo.Sexo = new List<SelectListItem>();
+        //        foreach (var valor in Enum.GetValues(typeof(Persona.Sexualidad)))
+        //        {
+        //            modelo.Sexo.Add(new SelectListItem
+        //            {
+        //                Value = valor.ToString(),
+        //                Text = Enum.GetName(typeof(Persona.Sexualidad), valor)
+        //            });
+        //        }
+        //        return View(modelo);
+        //    }
+        //    repopersona.EliminarPersona(
+        //        modelo.Carne);
+
+        //    return View(modelo);
+        //}
+
+
+
         public IActionResult Eliminar()
         {
 
