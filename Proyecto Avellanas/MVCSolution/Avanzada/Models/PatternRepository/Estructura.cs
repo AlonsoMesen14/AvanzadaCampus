@@ -99,10 +99,12 @@ namespace Avanzada.Models.PatternRepository
 
         public bool EliminarPersona(int id)
         {
-            if (ExistePersona(id)) {
+            if (ExistePersona(id))
+            {
                 return true;
             }
             return false;
+        }
 
         public List<Rubros> ObtenerRubros()
         {
@@ -117,6 +119,31 @@ namespace Avanzada.Models.PatternRepository
         public List<PreMatricula> ObtenerPreMatricula()
         {
             throw new NotImplementedException();
+        }
+
+        private List<Curso> Cursos;
+
+        public void InicializarCursos()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Cursos.Add(new Curso()
+                {
+
+                    Descripcion = "Grupo " + i,
+                    //IdCarrera = "Carrera " + i,
+                    Creditos = 3,
+                    //IdPersona
+                    //IdCurso
+                    //IdMateriaRequerida
+                });
+
+            }
+        }
+
+        public List<Curso> ObtenerCursos()
+        {
+            return Cursos;
         }
     }
 }
