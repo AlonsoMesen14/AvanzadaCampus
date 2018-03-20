@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
@@ -127,6 +127,29 @@ namespace Avanzada.Models.PatternRepository
             throw new NotImplementedException();
         }
 
-     
+        private List<Curso> Cursos;
+
+        public void InicializarCursos()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Cursos.Add(new Curso()
+                {
+
+                    Descripcion = "Grupo " + i,
+                    //IdCarrera = "Carrera " + i,
+                    Creditos = 3,
+                    //IdPersona
+                    //IdCurso
+                    //IdMateriaRequerida
+                });
+
+            }
+        }
+
+        public List<Curso> ObtenerCursos()
+        {
+            return Cursos;
+        }
     }
 }
