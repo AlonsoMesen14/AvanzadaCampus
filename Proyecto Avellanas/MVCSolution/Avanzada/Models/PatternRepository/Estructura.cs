@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, 
+        IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
+        private List<Notas> notas;
         private Perfil miperfil;
 
 
@@ -99,6 +101,7 @@ namespace Avanzada.Models.PatternRepository
             }
 
         }
+
         public List<Grupo> ObtenerGrupo()
         {
             return grupos;
@@ -174,7 +177,6 @@ namespace Avanzada.Models.PatternRepository
             return Cursos;
         }
 
-
         public Perfil ObtenerPerfil()
         {
             return miperfil;
@@ -207,6 +209,18 @@ namespace Avanzada.Models.PatternRepository
                 }
             }
             return false;
+        }
+
+        public List<Notas> ObtenerNotas()
+        {
+            return notas;
+        }
+
+        public bool EditarNota(Notas notas)
+        {
+            bool bandera = false;
+            
+            return bandera;
         }
     }
 }
