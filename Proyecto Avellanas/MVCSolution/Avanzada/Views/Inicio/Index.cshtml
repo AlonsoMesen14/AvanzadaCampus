@@ -47,9 +47,11 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="Perfil.html">
-                            <span class="fa fa-user"></span> Usuario
-                        </a>
+                        <a asp-controller="Perfil" asp-action="Ver"> <span class="fa fa-user"></span> Usuario</a>
+
+                    @*<a href="Perfil.html">
+                        <span class="fa fa-user"></span> Usuario
+                    </a>*@
                     </li>
                     <li>
                         <a href="Login.html">
@@ -100,7 +102,6 @@
 <body>
 
     <br>
-    <br>
     <div class="buttons">
 
         <div class="container">
@@ -118,7 +119,7 @@
                 <div class="col-md-2">
 
                     <div class="btn-group btn-group-justified">
-                        <a href="Notas.html" class="btn btn-primary">Notas Profesor</a>
+                        <a asp-controller="Nota" asp-action="Ver" class="btn btn-primary">Notas Profesor</a>
                     </div>
                 </div>
 
@@ -131,7 +132,9 @@
 
                 <div class="col-md-2">
                     <div class="btn-group btn-group-justified">
-                        <a href="Registro.html" class="btn btn-primary">Registro</a>
+                   @*     <a href="Registro.html" class="btn btn-primary">Registro</a>*@
+                        <a asp-controller="Persona" asp-action="Crear" class="btn btn-primary"> Registro</a>
+
                     </div>
                 </div>
 
@@ -185,7 +188,7 @@
                 <div class="col-md-2">
 
                     <div class="btn-group btn-group-justified">
-                        <a href="HistorialNotas.html" class="btn btn-primary">Notas Estudiante</a>
+                        <a asp-controller="Nota" asp-action="Historico" class="btn btn-primary">Notas Estudiante</a>
                     </div>
                 </div>
 
