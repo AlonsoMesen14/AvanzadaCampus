@@ -1,11 +1,11 @@
-﻿@model Avanzada.ViewModel.CursoViewModel.CursoViewModel
-
+﻿
 @{
+    ViewData["Title"] = "Eliminar_Curso";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Model.Title;
 }
 
 <header>
+
     <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,6 +21,7 @@
                     <span class="fa fa-user"></span> Curso
                 </a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -30,6 +31,7 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Curso
@@ -37,7 +39,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Agregar</a>
+                                <a href="Curso.html">Agregar</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
@@ -45,8 +47,9 @@
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="Eliminar_Curso.html">Eliminar</a>
+                                <a href="#">Eliminar</a>
                             </li>
+
                         </ul>
                     </li>
                     <li>
@@ -59,8 +62,11 @@
         <!-- /.container-fluid -->
     </nav>
 
+
 </header>
 
+
+<!--Modal con la asistencia tecnica-->
 <!-- Modal -->
 <div class="modal fade" id="Asistencia" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -93,14 +99,20 @@
 </div>
 
 <body class="body_registro">
+
     <section class="color_label_registro">
+
         <div class="container">
 
-            <h3 class="titulos">Agregar Cursos</h3>
+            <br />
+            <br />
+            <h3 class="titulos">Eliminar Curso</h3>
             <hr>
         </div>
+
         <div class="container">
             <form id="form-work" class="" name="form-work" action="#">
+
                 <fieldset>
                     <div class="form-group">
                         <div class="row">
@@ -118,81 +130,42 @@
                                     <option value="Carrera0008">Carrera0008</option>
                                 </select>
                             </div>
+
                             <div class="col-md-4">
-                                <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
+                                <label class="color_label_registro" for="curso">Curso</label>
                                 <select class="form-control">
-                                    <option selected>Seleccione el requisito del curso</option>
-                                    <option value="Req0001">Req0001</option>
-                                    <option value="Req0002">Req0002</option>
-                                    <option value="Req0003">Req0003</option>
-                                    <option value="Req0004">Req0004</option>
-                                    <option value="Req0005">Req0005</option>
-                                    <option value="Req0006">Req0006</option>
-                                    <option value="Req0007">Req0007</option>
-                                    <option value="Req0008">Req0008</option>
+                                    <option selected>Seleccione el curso</option>
+                                    <option value="Curso001">Curso001</option>
+                                    <option value="Curso002">Curso002</option>
+                                    <option value="Curso002">Curso003</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-offset-2 col-md-4">
                                 <label class="color_label_registro" for="IdCurso">Código de Curso</label>
                                 <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled>
                             </div>
-
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
-                                    <input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="color_label_registro" for="Creditos">Créditos</label>
-                                <input name="Creditos" class="form-control" placeholder="0" type="number" required>
-                            </div>
                         </div>
                     </div>
                 </fieldset>
-            </form>
 
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-4">
-                        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="Validar()">
-                            Crear Curso
-                            <span class="fa fa-save" aria-hidden="true"></span>
-                        </button>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-4">
+                            <button type="submit" class="btn btn-dark btn-lg btn_registrar">
+                                Eliminar
+                                <span class="fa fa-trash" aria-hidden="true"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-        <br>
-        <div id="contenido_tabla" class="container">
-            <div class="form-group">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th>Carrera</th>
-                                <th>Requisito</th>
-                                <th>Cód Curso </th>
-                                <th>Nombre Curso</th>
-                                <th>Créditos</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+
     </section>
 
-
 </body>
-
-

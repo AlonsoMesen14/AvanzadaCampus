@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso, IRepositorioAsistencia_Estudiante
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
@@ -14,6 +14,7 @@ namespace Avanzada.Models.PatternRepository
         {
             InicializarLista();
             InicializarPersona();
+            InicializarAsistencia();
         }
 
         public bool CrearPersona(Persona persona)
@@ -150,6 +151,32 @@ namespace Avanzada.Models.PatternRepository
         public List<Curso> ObtenerCursos()
         {
             return Cursos;
+        }
+
+        private List<Asistencia_Estudiante> AsistenciaEst;
+
+        DateTime hoy = DateTime.MaxValue ;
+
+        public void InicializarAsistencia()
+        {
+            AsistenciaEst = new List<Asistencia_Estudiante>();
+
+            for (int i = 1; i <= 10; i++)
+            {
+                AsistenciaEst.Add(new Asistencia_Estudiante()
+                {
+                    descripcion = "Asistencia " + i,
+                    FechaAsistencia = hoy,
+                    Id_persona = 100000000 + i,
+                    id_Grupo = "Grupo " + i,
+                    ind_asistencia = "Presente"
+                });
+            }
+        }
+
+        public List <Asistencia_Estudiante> ObtenerAsistenciaEstudiantes ()
+        {
+            return AsistenciaEst;
         }
     }
 }
