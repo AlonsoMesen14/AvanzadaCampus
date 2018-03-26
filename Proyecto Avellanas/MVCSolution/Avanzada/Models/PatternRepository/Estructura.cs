@@ -5,15 +5,18 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
+        private Perfil miperfil;
+
 
         public Estructura()
         {
             InicializarLista();
             InicializarPersona();
+            InicializarPerfil();
         }
 
         public bool CrearPersona(Persona persona)
@@ -34,6 +37,18 @@ namespace Avanzada.Models.PatternRepository
             personas = new List<Persona>();
         }
 
+        public void InicializarPerfil()
+        {
+            miperfil = new Perfil();
+            miperfil.Nombre_Completo = "Jesus Martinez Alvarado";
+            miperfil.Cedula = 12345678;
+            miperfil.Correo = "correo@gmail.com";
+            miperfil.Telefono = 12345678;
+            miperfil.Usuario = "jesus.martinez";
+            miperfil.Carne = 20160123;
+            miperfil.Fecha_Nac = DateTime.Parse("23/9/1997");
+            miperfil.Contraseña = "123456";
+        }
 
         public bool EditarPersona(Persona persona)
         {
@@ -106,7 +121,7 @@ namespace Avanzada.Models.PatternRepository
         {
             if (ExistePersona(id))
             {
-                personas.Remove( personas.Find( p => p.Cedula == id));
+                personas.Remove(personas.Find(p => p.Cedula == id));
                 return true;
             }
             return false;
@@ -150,6 +165,41 @@ namespace Avanzada.Models.PatternRepository
         public List<Curso> ObtenerCursos()
         {
             return Cursos;
+        }
+
+
+        public Perfil ObtenerPerfil()
+        {
+            return miperfil;
+        }
+
+        public bool EditarPerfil(int telefono, string correo)
+        {
+            bool cambio = false;
+            if (telefono != miperfil.Telefono)
+            {
+                miperfil.Telefono = telefono;
+                cambio = true;
+            }
+
+            if (miperfil.Correo != correo)
+            {
+                miperfil.Correo = correo;
+                cambio = true;
+            }
+            return cambio;
+        }
+
+        public bool Acceder(string Usuario, string contraseña)
+        {
+            if (Usuario == ObtenerPerfil().Usuario)
+            {
+                if (contraseña == ObtenerPerfil().Contraseña)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

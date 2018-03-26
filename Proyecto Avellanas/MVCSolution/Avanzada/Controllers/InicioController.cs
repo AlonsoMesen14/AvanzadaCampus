@@ -18,7 +18,7 @@ namespace Avanzada.Controllers
 
             return View(new IndexViewModel()
             {
-                Title = "Grupos",
+                Title = "Inicio",
             });
             //return View(x.ObtenerPersonas());
 
