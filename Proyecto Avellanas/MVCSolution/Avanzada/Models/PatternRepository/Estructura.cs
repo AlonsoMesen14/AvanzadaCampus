@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -46,7 +47,13 @@ namespace Avanzada.Models.PatternRepository
             miperfil.Telefono = 12345678;
             miperfil.Usuario = "jesus.martinez";
             miperfil.Carne = 20160123;
-            miperfil.Fecha_Nac = DateTime.Parse("23/9/1997");
+            miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
+            //        miperfil.Fecha_Nac= DateTime.ParseExact("12/7/1997", "dd/MM/yyyy",
+            //System.Globalization.CultureInfo.InvariantCulture);
+            //        miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997",
+            //System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);
+            //miperfil.Fecha_Nac = DateTime.Parse("23/9/1997");
+            //miperfil.Fecha_Nac = DateTime.ParseExact("23/9/1997","dd/MM/yyyy", null);
             miperfil.Contraseña = "123456";
         }
 
