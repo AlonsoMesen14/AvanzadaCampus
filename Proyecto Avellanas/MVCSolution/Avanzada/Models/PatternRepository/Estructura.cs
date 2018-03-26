@@ -1,33 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-<<<<<<< HEAD
     public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso, IRepositorioAsistencia_Estudiante
-=======
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, 
-        IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota
->>>>>>> def0da5cff8f693b719db9ad9acf5c17cd98e2bc
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
-        private List<Notas> notas;
-        private Perfil miperfil;
-
 
         public Estructura()
         {
             InicializarLista();
             InicializarPersona();
-<<<<<<< HEAD
             InicializarAsistencia();
-=======
-            InicializarPerfil();
->>>>>>> def0da5cff8f693b719db9ad9acf5c17cd98e2bc
         }
 
         public bool CrearPersona(Persona persona)
@@ -48,24 +35,6 @@ namespace Avanzada.Models.PatternRepository
             personas = new List<Persona>();
         }
 
-        public void InicializarPerfil()
-        {
-            miperfil = new Perfil();
-            miperfil.Nombre_Completo = "Jesus Martinez Alvarado";
-            miperfil.Cedula = 12345678;
-            miperfil.Correo = "correo@gmail.com";
-            miperfil.Telefono = 12345678;
-            miperfil.Usuario = "jesus.martinez";
-            miperfil.Carne = 20160123;
-            miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
-            //        miperfil.Fecha_Nac= DateTime.ParseExact("12/7/1997", "dd/MM/yyyy",
-            //System.Globalization.CultureInfo.InvariantCulture);
-            //        miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997",
-            //System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);
-            //miperfil.Fecha_Nac = DateTime.Parse("23/9/1997");
-            //miperfil.Fecha_Nac = DateTime.ParseExact("23/9/1997","dd/MM/yyyy", null);
-            miperfil.Contraseña = "123456";
-        }
 
         public bool EditarPersona(Persona persona)
         {
@@ -109,7 +78,6 @@ namespace Avanzada.Models.PatternRepository
             }
 
         }
-
         public List<Grupo> ObtenerGrupo()
         {
             return grupos;
@@ -139,7 +107,7 @@ namespace Avanzada.Models.PatternRepository
         {
             if (ExistePersona(id))
             {
-                personas.Remove(personas.Find(p => p.Cedula == id));
+                personas.Remove( personas.Find( p => p.Cedula == id));
                 return true;
             }
             return false;
@@ -185,15 +153,14 @@ namespace Avanzada.Models.PatternRepository
             return Cursos;
         }
 
-<<<<<<< HEAD
         private List<Asistencia_Estudiante> AsistenciaEst;
 
-        DateTime hoy = DateTime.MaxValue ;
+        DateTime hoy = DateTime.Now ;
 
         public void InicializarAsistencia()
         {
             AsistenciaEst = new List<Asistencia_Estudiante>();
-
+            
             for (int i = 1; i <= 10; i++)
             {
                 AsistenciaEst.Add(new Asistencia_Estudiante()
@@ -210,52 +177,6 @@ namespace Avanzada.Models.PatternRepository
         public List <Asistencia_Estudiante> ObtenerAsistenciaEstudiantes ()
         {
             return AsistenciaEst;
-=======
-        public Perfil ObtenerPerfil()
-        {
-            return miperfil;
-        }
-
-        public bool EditarPerfil(int telefono, string correo)
-        {
-            bool cambio = false;
-            if (telefono != miperfil.Telefono)
-            {
-                miperfil.Telefono = telefono;
-                cambio = true;
-            }
-
-            if (miperfil.Correo != correo)
-            {
-                miperfil.Correo = correo;
-                cambio = true;
-            }
-            return cambio;
-        }
-
-        public bool Acceder(string Usuario, string contraseña)
-        {
-            if (Usuario == ObtenerPerfil().Usuario)
-            {
-                if (contraseña == ObtenerPerfil().Contraseña)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public List<Notas> ObtenerNotas()
-        {
-            return notas;
-        }
-
-        public bool EditarNota(Notas notas)
-        {
-            bool bandera = false;
-            
-            return bandera;
->>>>>>> def0da5cff8f693b719db9ad9acf5c17cd98e2bc
         }
     }
 }
