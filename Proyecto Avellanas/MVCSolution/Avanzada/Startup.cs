@@ -37,11 +37,7 @@ namespace Avanzada
                 name: "Avellanas",
                 template: "{controller}/{action}/{id?}",
                 //indica la vista la cual sera cargada por defecto (cuand se inicia la app) 
-<<<<<<< HEAD
-                defaults: new { controller = "Asistencia_Estudiante", action = "Asistencia_Estudiante" }
-=======
                 defaults: new { controller = "Inicio", action = "Index" }
->>>>>>> def0da5cff8f693b719db9ad9acf5c17cd98e2bc
                 ));
         }
     }
