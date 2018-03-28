@@ -28,12 +28,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+<<<<<<< HEAD
                     <li class="active">
                     <li class="active"><a asp-controller="Inicio" asp-action="Index">Inicio <span class="sr-only">(current)</span></a></li>
                             <span class="fa fa-home"></span> Inicio
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+=======
+                    <li class="active"><a asp-controller="Inicio" asp-action="Index">Inicio <span class="sr-only">(current)</span></a></li>
+
+>>>>>>> b0e7035caea2ec49d6cac490a8ce4f4e4656ea5d
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Grupos
@@ -84,7 +89,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message-text" class="col-form-label">Corta Descripcion:</label>
-                        <input type="textarea" name="" class="form-control">
+                        <input type="text" name="" class="form-control">
                     </div>
                 </form>
             </div>
@@ -128,10 +133,10 @@
                                 @foreach (var grupo in Model.Grupo)
                                 {
 
-                                    <option value="" >@grupo.IdCarrera</option>
+                                    <option value="">@grupo.IdCarrera</option>
                                 }
 
-                               
+
                             </select>
                         </div>
                         <div class="col-md-6">
@@ -141,10 +146,10 @@
                                 <option value="" selected>Seleccione el curso</option>
 
                                 @foreach (var grupo in Model.Grupo)
-    {
+                                {
 
-                            <option value="" selected>@grupo.IdCurso</option>
-}
+                                    <option value="" selected>@grupo.IdCurso</option>
+                                }
 
                             </select>
                         </div>
@@ -154,10 +159,10 @@
                                 <option value="" selected>Seleccione el horario</option>
 
                                 @foreach (var grupo in Model.Grupo)
-                                    {
+                                {
 
-                                        <option value="" selected>@grupo.IdHorario</option>
-                                    }
+                                    <option value="" selected>@grupo.IdHorario</option>
+                                }
 
                             </select>
                         </div>

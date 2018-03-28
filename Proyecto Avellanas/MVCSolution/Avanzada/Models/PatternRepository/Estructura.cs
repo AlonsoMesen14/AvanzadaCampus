@@ -50,7 +50,11 @@ namespace Avanzada.Models.PatternRepository
             miperfil.Usuario = "jesus.martinez";
             miperfil.Carne = 20160123;
             miperfil.Fecha_Nac = Convert.ToDateTime("1997/9/23");
+
+            miperfil.Contraseña = "123456";
+
          miperfil.Contraseña = "123456";
+
         }
 
         public bool EditarPersona(Persona persona)
