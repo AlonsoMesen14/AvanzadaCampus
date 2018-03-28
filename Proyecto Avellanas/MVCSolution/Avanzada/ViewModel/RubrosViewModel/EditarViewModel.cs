@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Avanzada.ViewModel.RubrosViewModel
 {
-    public class IndexViewModel
+    public class EditarViewModel
     {
         public string Title { get; set; }
         public List<Models.Rubros> Rubros { get; set; }
+
     }
 }

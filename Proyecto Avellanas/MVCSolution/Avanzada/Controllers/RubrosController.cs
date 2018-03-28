@@ -23,5 +23,20 @@ namespace Avanzada.Controllers
                 Title = "Rubros",
             });
         }
+
+        public IActionResult Editar()
+        {
+            ViewBag.Title = "Rubros";
+
+            return View(new EditarViewModel()
+            {
+                Title = "Editar Rubros",
+            });
+        }
+
+
+
+
+
     }
 }
