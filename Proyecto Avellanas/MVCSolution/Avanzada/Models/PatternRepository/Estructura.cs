@@ -49,18 +49,8 @@ namespace Avanzada.Models.PatternRepository
             miperfil.Telefono = 12345678;
             miperfil.Usuario = "jesus.martinez";
             miperfil.Carne = 20160123;
-<<<<<<< HEAD
-       //     miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
-=======
             miperfil.Fecha_Nac = Convert.ToDateTime("1997/9/23");
->>>>>>> d5757fe47d286c7a355c492a031febb2b51019a2
-            //        miperfil.Fecha_Nac= DateTime.ParseExact("12/7/1997", "dd/MM/yyyy",
-            //System.Globalization.CultureInfo.InvariantCulture);
-            //        miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997",
-            //System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);
-            //miperfil.Fecha_Nac = DateTime.Parse("23/9/1997");
-            //miperfil.Fecha_Nac = DateTime.ParseExact("23/9/1997","dd/MM/yyyy", null);
-            miperfil.Contraseña = "123456";
+         miperfil.Contraseña = "123456";
         }
 
         public bool EditarPersona(Persona persona)
