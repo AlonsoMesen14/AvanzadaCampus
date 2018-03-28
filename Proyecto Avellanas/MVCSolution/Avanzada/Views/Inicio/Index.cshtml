@@ -33,12 +33,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">
-                            <span class="fa fa-home"></span> Inicio
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+                                        <li class="active"><a asp-controller="Inicio" asp-action="Index">Inicio <span class="sr-only">(current)</span></a></li>
+
 
                     <li>
                         <a href="#" data-toggle="modal" data-target="#Asistencia"><span class="fa fa-question-circle"></span> Asistencia Tecnica</a>
@@ -192,14 +188,14 @@
                 <div class="col-md-2">
 
                     <div class="btn-group btn-group-justified">
-                        <a href="Detalle Grupo.html" class="btn btn-primary">A. Estudiante</a>
+                        <a asp-controller="Asistencia_Estudiante" asp-action="Asistencia_Estudiante" class="btn btn-primary"> Asistencia Estudiante</a>
                     </div>
                 </div>
 
                 <div class="col-md-2">
 
                     <div class="btn-group btn-group-justified">
-                        <a href="Curso.cshtml" class="btn btn-primary">Cursos</a>
+                        <a asp-controller="Curso" asp-action="Curso" class="btn btn-primary">  Curso</a>
                     </div>
                 </div>
 

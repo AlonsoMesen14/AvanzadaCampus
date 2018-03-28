@@ -1,6 +1,7 @@
-﻿
+﻿@model Avanzada.ViewModel.CursoViewModel.EditarViewModel
+
 @{
-    ViewData["Title"] = "Eliminar_Curso";
+    ViewData["Title"] = "Editar_Curso";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -26,7 +27,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="Inicio.html">
+                    <li class="active"><a asp-controller="Inicio" asp-action="Index">Inicio <span class="sr-only">(current)</span></a></li>
                             <span class="fa fa-home"></span> Inicio
                             <span class="sr-only">(current)</span>
                         </a>
@@ -39,17 +40,16 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="Curso.html">Agregar</a>
+                        <a asp-controller="Curso" asp-action="Curso" class="btn btn-primary">  Agregar Curso</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="Editar_Curso.html">Editar</a>
+                        <a asp-controller="Curso" asp-action="Editar" class="btn btn-primary">  Editar Curso</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="#">Eliminar</a>
+                        <a asp-controller="Curso" asp-action="Eliminar" class="btn btn-primary">  Eliminar Curso</a>
                             </li>
-
                         </ul>
                     </li>
                     <li>
@@ -65,8 +65,6 @@
 
 </header>
 
-
-<!--Modal con la asistencia tecnica-->
 <!-- Modal -->
 <div class="modal fade" id="Asistencia" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -102,11 +100,11 @@
 
     <section class="color_label_registro">
 
-        <div class="container">
 
+        <div class="container">
             <br />
             <br />
-            <h3 class="titulos">Eliminar Curso</h3>
+            <h3 class="titulos">Editar Curso</h3>
             <hr>
         </div>
 
@@ -132,12 +130,17 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="color_label_registro" for="curso">Curso</label>
+                                <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
                                 <select class="form-control">
-                                    <option selected>Seleccione el curso</option>
-                                    <option value="Curso001">Curso001</option>
-                                    <option value="Curso002">Curso002</option>
-                                    <option value="Curso002">Curso003</option>
+                                    <option selected>Seleccione el requisito del curso</option>
+                                    <option value="Req0001">Req0001</option>
+                                    <option value="Req0002">Req0002</option>
+                                    <option value="Req0003">Req0003</option>
+                                    <option value="Req0004">Req0004</option>
+                                    <option value="Req0005">Req0005</option>
+                                    <option value="Req0006">Req0006</option>
+                                    <option value="Req0007">Req0007</option>
+                                    <option value="Req0008">Req0008</option>
                                 </select>
                             </div>
                         </div>
@@ -149,22 +152,43 @@
                                 <label class="color_label_registro" for="IdCurso">Código de Curso</label>
                                 <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled>
                             </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
+                                    <input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-4">
+                                <label class="color_label_registro" for="Creditos">Créditos</label>
+                                <input name="Creditos" class="form-control" placeholder="0" type="number" required>
+                            </div>
+                        </div>
+                    </div>
+
                 </fieldset>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-4">
-                            <button type="submit" class="btn btn-dark btn-lg btn_registrar">
-                                Eliminar
-                                <span class="fa fa-trash" aria-hidden="true"></span>
-                            </button>
-                        </div>
+            </form>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-4">
+                        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="alert('Cambios Guardados')">
+                            Guardar Cambios
+                            <span class="fa fa-save" aria-hidden="true"></span>
+                        </button>
                     </div>
                 </div>
-            </form>
+            </div>
+
         </div>
+
 
     </section>
 

@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="Inicio.html">
+                    <li class="active"><a asp-controller="Inicio" asp-action="Index">Inicio <span class="sr-only">(current)</span>
                             <span class="fa fa-home"></span> Inicio
                             <span class="sr-only">(current)</span>
                         </a>
@@ -131,11 +131,11 @@
                                 <label class="control-label" for="correo">Grupo:</label>
                                 <select required class="form-control">
                                     <option value="" selected>Seleccione</option>
-                                    @foreach (var asis in Model.Asistencia )
+                                    @*@foreach (var asis in Model.Asistencia )
                                     {
                                         <option value="" >@asis.id_Grupo</option>
 
-                                    }
+                                    }*@
                                 </select>
                             </div>
                         </div>
@@ -168,9 +168,9 @@
 
                                     <select class="color_select" required>
                                         <option selected value="">Seleccione</option>
-                                        @foreach (var asis in Model.Asistencia)
+                                        @*@foreach (var asis in Model.Asistencia)
     {
-                                    <option value="">@asis.ind_asistencia</option>
+                                    <option value="">@asis.ind_asistencia</option>*@
 
 }
                                     </select>
@@ -186,9 +186,9 @@
 
                                     <select required class="color_select">
                                         <option selected value="">Seleccione</option>
-                                        @foreach (var asis in Model.Asistencia)
+                                        @*@foreach (var asis in Model.Asistencia)
     {
-                                    <option value="">@asis.ind_asistencia</option>
+                                    <option value="">@asis.ind_asistencia</option>*@
 
 }
                                     </select>
@@ -202,9 +202,9 @@
 
                                     <select required class="color_select">
                                         <option selected value="0">Seleccione</option>
-                                        @foreach (var asis in Model.Asistencia)
+                                        @*@foreach (var asis in Model.Asistencia)
     {
-                                    <option value="">@asis.ind_asistencia</option>
+                                    <option value="">@asis.ind_asistencia</option>*@
 
 }
 
