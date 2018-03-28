@@ -47,7 +47,7 @@ namespace Avanzada.Models.PatternRepository
             miperfil.Telefono = 12345678;
             miperfil.Usuario = "jesus.martinez";
             miperfil.Carne = 20160123;
-            miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
+       //     miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
             //        miperfil.Fecha_Nac= DateTime.ParseExact("12/7/1997", "dd/MM/yyyy",
             //System.Globalization.CultureInfo.InvariantCulture);
             //        miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997",

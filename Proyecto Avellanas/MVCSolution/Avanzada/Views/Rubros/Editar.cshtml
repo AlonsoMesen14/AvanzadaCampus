@@ -33,6 +33,9 @@
                             <li><a asp-controller="Rubros" asp-action="Index">Agregar</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a asp-controller="Rubros" asp-action="Editar">Editar</a></li>
+                            <li role="separator" class="divider"></li>
+
+
                         </ul>
                     </li>
                     <li><a href="#" data-toggle="modal" data-target="#Asistencia">Asistencia Tecnica</a></li>
@@ -82,8 +85,9 @@
     <section class="color_label_registro">
 
         <div class="container">
-          
-            <h3 class="titulos">Registro de Rubros</h3>
+            <br />
+            <br />
+            <h3 class="titulos">Edicion de Rubros</h3>
             <hr>
         </div>
 
@@ -108,80 +112,50 @@
                             </div>
                         </div>
                     </div>
+                    <br />
+                    <br />
 
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="control-label" for="nome">Nombre del Rubro</label>
-                                <input name="Nombre" class="form-control" placeholder="Jon" type="text" required="true">
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <label class="control-label" for="porcentaje">Porcentaje</label>
-                                    <input name="Porcenetaje" class="form-control" placeholder="Doe" type="number" required="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-offset-2 col-md-4">
-                                    <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="">
-                                        Crear
-                                        <span class="fa fa-save" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <br />
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-offset-2 col-md-8">
-
-                                    <table class="table">
-                                        <thead class="thead-inverse">
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre de Rubro</th>
-                                                <th>Porcentaje</th>
-                                                <th>Eliminar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>Tarea 1</td>
-                                                <td>10%</td>
-                                                <td>
-                                                    <button class="btn btn-dark btn-sm btn_boton">
-                                                        <i class="fa fa-trash-o"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        <th>2</th>
-                                        <td>Examen 1</td>
-                                        <td>25%</td>
-                                        <td>
-                                            <button class="btn btn-dark btn-sm btn_boton">
-                                                <i class="fa fa-trash-o"></i>
-                                            </button>
-                                        </td>
+                            <div class="col-md-offset-2 col-md-8">
+                                <table class="table">
+                                    <thead class="thead-inverse">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre de Rubro</th>
+                                            <th>Porcentaje</th>
+                                            <th>Editar</th>
                                         </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td colspan="3">Total Porcentaje</td>
-                                                <td>35%</td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Tarea 1</td>
+                                            <td>10%</td>
+                                            <td>
+                                                <button type="submit" class="btn btn-dark btn-sm btn_boton" onclick="">
+                                                    <span class="fa fa-pencil" aria-hidden="true"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <th>2</th>
+                                    <td>Examen 1</td>
+                                    <td>25%</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-dark btn-sm btn_boton" onclick="">
+                                            <span class="fa fa-pencil" aria-hidden="true"></span>
+                                        </button>
+                                    </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </fieldset>
+        </div>
+        </fieldset>
 
-            </form>
+        </form>
         </div>
     </section>
 

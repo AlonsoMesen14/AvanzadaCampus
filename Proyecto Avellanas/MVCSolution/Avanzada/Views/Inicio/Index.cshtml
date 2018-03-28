@@ -112,7 +112,9 @@
                 <div class="col col-md-2">
 
                     <div class="btn-group btn-group-justified">
-                        <a href="Matri.html" class="btn btn-primary">Matricula</a>
+                        @*<a href="Matri.html" class="btn btn-primary">Matricula</a>*@
+                        <a asp-controller="Matricula" asp-action="Index" class="btn btn-primary"> Matricula</a>
+                      
                     </div>
                 </div>
 
@@ -132,25 +134,20 @@
 
                 <div class="col-md-2">
                     <div class="btn-group btn-group-justified">
-                   @*     <a href="Registro.html" class="btn btn-primary">Registro</a>*@
+                        @*<a href="Registro.html" class="btn btn-primary">Registro</a>*@
                         <a asp-controller="Persona" asp-action="Crear" class="btn btn-primary"> Registro</a>
-
                     </div>
                 </div>
-
                 <div class="col-md-2">
-
                     <div class="btn-group btn-group-justified">
                         <a href="Carrera.html" class="btn btn-primary">Carreras</a>
                     </div>
                 </div>
                 <div class="col-md-2">
-
                     <div class="btn-group btn-group-justified">
                         <a href="AulaLinea.html" class="btn btn-primary">Aula</a>
                     </div>
                 </div>
-
             </div>
             <hr>
 
@@ -215,7 +212,8 @@
 
                 <div class="col-md-2">
                     <div class="btn-group btn-group-justified">
-                        <a href="AgregarRubros.html" class="btn btn-primary">Rubros</a>
+                       
+                        <a asp-controller="Rubros" asp-action="Index" class="btn btn-primary"> Rubros</a>
                     </div>
                 </div>
 
