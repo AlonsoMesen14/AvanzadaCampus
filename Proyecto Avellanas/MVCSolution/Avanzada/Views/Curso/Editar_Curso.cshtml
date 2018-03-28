@@ -1,11 +1,11 @@
-﻿@model Avanzada.ViewModel.CursoViewModel.CursoViewModel
-
+﻿d
 @{
+    ViewData["Title"] = "Editar_Curso";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = Model.Title;
 }
 
 <header>
+
     <nav class="navbar navbar-toggleable-md navbar-inverse navbar-fixed-top bg-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,6 +21,7 @@
                     <span class="fa fa-user"></span> Curso
                 </a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -30,6 +31,7 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Curso
@@ -37,16 +39,17 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Agregar</a>
+                                <a href="Curso.html">Agregar</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="Editar_Curso.html">Editar</a>
+                                <a href="#">Editar</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
                                 <a href="Eliminar_Curso.html">Eliminar</a>
                             </li>
+
                         </ul>
                     </li>
                     <li>
@@ -58,6 +61,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
 
 </header>
 
@@ -93,14 +97,20 @@
 </div>
 
 <body class="body_registro">
-    <section class="color_label_registro">
-        <div class="container">
 
-            <h3 class="titulos">Agregar Cursos</h3>
+    <section class="color_label_registro">
+
+
+        <div class="container">
+            <br />
+            <br />
+            <h3 class="titulos">Editar Curso</h3>
             <hr>
         </div>
+
         <div class="container">
             <form id="form-work" class="" name="form-work" action="#">
+
                 <fieldset>
                     <div class="form-group">
                         <div class="row">
@@ -118,6 +128,7 @@
                                     <option value="Carrera0008">Carrera0008</option>
                                 </select>
                             </div>
+
                             <div class="col-md-4">
                                 <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
                                 <select class="form-control">
@@ -134,12 +145,14 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-offset-2 col-md-4">
                                 <label class="color_label_registro" for="IdCurso">Código de Curso</label>
                                 <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled>
                             </div>
+
 
                             <div class="form-group">
                                 <div class="col-md-4">
@@ -149,6 +162,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-offset-2 col-md-4">
@@ -157,42 +171,25 @@
                             </div>
                         </div>
                     </div>
+
                 </fieldset>
+
             </form>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-offset-2 col-md-4">
-                        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="Validar()">
-                            Crear Curso
+                        <button type="submit" class="btn btn-dark btn-lg btn_registrar" onclick="alert('Cambios Guardados')">
+                            Guardar Cambios
                             <span class="fa fa-save" aria-hidden="true"></span>
                         </button>
                     </div>
                 </div>
             </div>
+
         </div>
-        <br>
-        <div id="contenido_tabla" class="container">
-            <div class="form-group">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th>Carrera</th>
-                                <th>Requisito</th>
-                                <th>Cód Curso </th>
-                                <th>Nombre Curso</th>
-                                <th>Créditos</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+
+
     </section>
 
-
 </body>
-
-

@@ -26,7 +26,6 @@ namespace Avanzada.Controllers
                 Title = "Cursos",
                 Curso = repocurso.ObtenerCursos()
             });
-            //return View(x.ObtenerPersonas());
 
         }
     }

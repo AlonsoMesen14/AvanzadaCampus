@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros, IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion
+    public class Estructura : IRepositorioGrupo, IRepositorioPersona, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros,
+        IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota, IRepositorioAsistencia_Estudiante
     {
         private List<Grupo> grupos;
         private List<Persona> personas;
+        private List<Notas> notas;
         private Perfil miperfil;
 
 
@@ -47,7 +49,11 @@ namespace Avanzada.Models.PatternRepository
             miperfil.Telefono = 12345678;
             miperfil.Usuario = "jesus.martinez";
             miperfil.Carne = 20160123;
+<<<<<<< HEAD
        //     miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997");
+=======
+            miperfil.Fecha_Nac = Convert.ToDateTime("1997/9/23");
+>>>>>>> d5757fe47d286c7a355c492a031febb2b51019a2
             //        miperfil.Fecha_Nac= DateTime.ParseExact("12/7/1997", "dd/MM/yyyy",
             //System.Globalization.CultureInfo.InvariantCulture);
             //        miperfil.Fecha_Nac = Convert.ToDateTime("23/9/1997",
@@ -99,6 +105,7 @@ namespace Avanzada.Models.PatternRepository
             }
 
         }
+
         public List<Grupo> ObtenerGrupo()
         {
             return grupos;
@@ -174,7 +181,6 @@ namespace Avanzada.Models.PatternRepository
             return Cursos;
         }
 
-
         public Perfil ObtenerPerfil()
         {
             return miperfil;
@@ -208,5 +214,44 @@ namespace Avanzada.Models.PatternRepository
             }
             return false;
         }
+
+        public List<Notas> ObtenerNotas()
+        {
+            return notas;
+        }
+
+        public bool EditarNota(Notas notas)
+        {
+            bool bandera = false;
+
+            return bandera;
+        }
+    
+
+    private List<Asistencia_Estudiante> AsistenciaEst;
+
+    DateTime hoy = DateTime.Now;
+
+    public void InicializarAsistencia()
+    {
+        AsistenciaEst = new List<Asistencia_Estudiante>();
+
+        for (int i = 1; i <= 10; i++)
+        {
+            AsistenciaEst.Add(new Asistencia_Estudiante()
+            {
+                descripcion = "Asistencia " + i,
+                FechaAsistencia = hoy,
+                Id_persona = 100000000 + i,
+                id_Grupo = "Grupo " + i,
+                ind_asistencia = "Presente"
+            });
+        }
     }
+
+    public List<Asistencia_Estudiante> ObtenerAsistenciaEstudiantes()
+    {
+        return AsistenciaEst;
+    }
+}
 }
