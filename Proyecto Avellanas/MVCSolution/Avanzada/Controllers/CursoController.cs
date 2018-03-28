@@ -28,5 +28,29 @@ namespace Avanzada.Controllers
             });
 
         }
+
+        public IActionResult Eliminar()
+        {
+            ViewBag.Title = "Eliminar Cursos";
+
+            return View(new EliminarViewModel()
+            {
+                Title = "Eliminar Cursos",
+                Curso = repocurso.ObtenerCursos()
+            });
+
+        }
+
+        public IActionResult Editar()
+        {
+            ViewBag.Title = "Editar Cursos";
+
+            return View(new EditarViewModel()
+            {
+                Title = "Editar Cursos",
+                Curso = repocurso.ObtenerCursos()
+            });
+
+        }
     }
 }
