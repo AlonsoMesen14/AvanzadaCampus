@@ -7,10 +7,23 @@ namespace Avanzada.Models
 {
     public class Asistencia_Estudiante
     {
-        public string id_Grupo { get; set; }
-        public string ind_asistencia { get; set; }
+        public int Id { get; set; }
         public DateTime FechaAsistencia { get; set; }
-        public string descripcion { get; set; }
-        public int Id_persona { get; set; }
+
+        //foreign key Curso
+        public int CursoId { get; set; } //string 
+        public Curso Curso{ get; set; }
+
+        //foreign key Grupo
+        public int GrupoId { get; set; }
+        public Grupo Grupo { get; set; }
+
+        public int Asistencia { get; set; } //enum o pasar por debajo
+        //public string Descripcion { get; set; }
+
+        //foreign key tipopersona
+        public int EstudianteId { get; set; }
+        public int ProfesorId { get; set; }
+        public TipoPersona TipoPersona { get; set; }
     }
 }

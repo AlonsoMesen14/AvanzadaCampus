@@ -18,5 +18,7 @@ namespace Avanzada.Models
         public string Contraseña { get; set; }
         public string Usuario { get; set; }
 
+        //Posiblemente no sea de utilidad dado que se utilizaran los datos de la tabla persona 
+        //filtrando por el usuario actualment logueado 
     }
 }

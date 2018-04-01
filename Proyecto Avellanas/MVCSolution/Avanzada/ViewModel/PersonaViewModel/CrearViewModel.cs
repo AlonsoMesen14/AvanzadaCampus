@@ -37,6 +37,7 @@ namespace Avanzada.ViewModel.PersonaViewModel
         [Required(ErrorMessage = "El correo de la persona es requerido.")]
         [Display(Name = "Correo")]
         public string Correo { get; set; }
+
         [Required(ErrorMessage = "El sexo de la persona es requerido.")]
         [Display(Name = "Sexo")]
         public List<SelectListItem> Sexo { get; set; }

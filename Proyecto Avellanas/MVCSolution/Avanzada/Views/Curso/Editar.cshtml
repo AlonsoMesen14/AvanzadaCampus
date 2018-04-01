@@ -1,7 +1,7 @@
 ﻿@model Avanzada.ViewModel.CursoViewModel.EditarViewModel
 
 @{
-    ViewData["Title"] = "Editar_Curso";
+    ViewData["Title"] = "Editar Curso";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -20,14 +20,16 @@
                 </button>
                 <a class="navbar-brand" href="#">
                     <span class="fa fa-user"></span> Curso
-                   </a>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                    <li class="active"><a asp-controller="Inicio" asp-action="Index"> <span class="sr-only">(current)</span>
+                    <li class="active">
+                        <a asp-controller="Inicio" asp-action="Index">
+                            <span class="sr-only">(current)</span>
                             <span class="fa fa-home"></span> Inicio
                             <span class="sr-only">(current)</span>
                         </a>
@@ -39,15 +41,15 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                        <a asp-controller="Curso" asp-action="Curso" >  Agregar Curso</a>
+                                <a asp-controller="Curso" asp-action="Curso">  Agregar Curso</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                        <a asp-controller="Curso" asp-action="Editar" >  Editar Curso</a>
+                                <a asp-controller="Curso" asp-action="Editar">  Editar Curso</a>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                        <a asp-controller="Curso" asp-action="Eliminar" >  Eliminar Curso</a>
+                                <a asp-controller="Curso" asp-action="Eliminar">  Eliminar Curso</a>
                             </li>
                         </ul>
                     </li>
@@ -128,49 +130,69 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-4">
-                                <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
-                                <select class="form-control">
-                                    <option selected>Seleccione el requisito del curso</option>
-                                    <option value="Req0001">Req0001</option>
-                                    <option value="Req0002">Req0002</option>
-                                    <option value="Req0003">Req0003</option>
-                                    <option value="Req0004">Req0004</option>
-                                    <option value="Req0005">Req0005</option>
-                                    <option value="Req0006">Req0006</option>
-                                    <option value="Req0007">Req0007</option>
-                                    <option value="Req0008">Req0008</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="form-group">
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
+                                    @*<input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required>*@
+
+                                    <select class="form-control">
+                                        <option selected>Seleccione el curso</option>
+                                        @*<option value="Req0001">Req0001</option>
+                                            <option value="Req0002">Req0002</option>
+                                            <option value="Req0003">Req0003</option>
+                                            <option value="Req0004">Req0004</option>
+                                            <option value="Req0005">Req0005</option>
+                                            <option value="Req0006">Req0006</option>
+                                            <option value="Req0007">Req0007</option>
+                                            <option value="Req0008">Req0008</option>*@
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+
                         <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="color_label_registro" for="IdCurso">Código de Curso</label>
-                                <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled>
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-4">
+                                    <label class="color_label_registro" for="IdCurso">Código de Curso</label>
+                                    <input name="IdCurso" class="form-control" placeholder="CUR00010" type="text" disabled>
+                                </div>
                             </div>
 
 
                             <div class="form-group">
                                 <div class="col-md-4">
-                                    <label class="color_label_registro" for="DesCurso">Nombre del Curso</label>
-                                    <input name="DesCurso" class="form-control" placeholder="Curso 0001" type="text" required>
+                                    <label class="color_label_registro" for="IdMateriaReq">Materia Requerida</label>
+                                    <select class="form-control">
+                                        <option selected>Seleccione el requisito del curso</option>
+                                        <option value="Req0001">Req0001</option>
+                                        <option value="Req0002">Req0002</option>
+                                        <option value="Req0003">Req0003</option>
+                                        <option value="Req0004">Req0004</option>
+                                        <option value="Req0005">Req0005</option>
+                                        <option value="Req0006">Req0006</option>
+                                        <option value="Req0007">Req0007</option>
+                                        <option value="Req0008">Req0008</option>
+
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
                         <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="color_label_registro" for="Creditos">Créditos</label>
-                                <input name="Creditos" class="form-control" placeholder="0" type="number" required>
+
+                            <div class="form-group">
+                                @* <div class="row">*@
+                                <div class="col-md-offset-2 col-md-4">
+                                    <label class="color_label_registro" for="Creditos">Créditos</label>
+                                    <input name="Creditos" class="form-control" placeholder="0" type="number" required>
+                                </div>
+                                @* </div> *@
                             </div>
                         </div>
-                    </div>
-
                 </fieldset>
 
             </form>

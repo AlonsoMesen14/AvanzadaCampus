@@ -20,6 +20,7 @@ namespace Avanzada.Models.PatternRepository
             InicializarLista();
             InicializarPersona();
             InicializarPerfil();
+            InicializarAsistencia();
         }
 
         public bool CrearPersona(Persona persona)
@@ -53,7 +54,7 @@ namespace Avanzada.Models.PatternRepository
 
             miperfil.Contraseña = "123456";
 
-         miperfil.Contraseña = "123456";
+            miperfil.Contraseña = "123456";
 
         }
 
@@ -91,10 +92,10 @@ namespace Avanzada.Models.PatternRepository
             {
                 grupos.Add(new Grupo()
                 {
-                    Descripcion = "Grupo " + i,
-                    IdHorario = "Viernes",
-                    IdCarrera = "Carrera " + i,
-                    IdCurso = "Curso " + i
+
+                    Horario = 1,
+
+                    CursoId = 1
                 });
             }
 
@@ -159,7 +160,7 @@ namespace Avanzada.Models.PatternRepository
                 Cursos.Add(new Curso()
                 {
 
-                    Descripcion = "Grupo " + i,
+                    Nombre_Curso = "Grupo " + i,
                     //IdCarrera = "Carrera " + i,
                     Creditos = 3,
                     //IdPersona
@@ -220,32 +221,32 @@ namespace Avanzada.Models.PatternRepository
 
             return bandera;
         }
-    
 
-    private List<Asistencia_Estudiante> AsistenciaEst;
 
-    DateTime hoy = DateTime.Now;
+        private List<Asistencia_Estudiante> AsistenciaEst;
 
-    public void InicializarAsistencia()
-    {
-        AsistenciaEst = new List<Asistencia_Estudiante>();
+        DateTime hoy = DateTime.Now;
 
-        for (int i = 1; i <= 10; i++)
+        public void InicializarAsistencia()
         {
-            AsistenciaEst.Add(new Asistencia_Estudiante()
+            AsistenciaEst = new List<Asistencia_Estudiante>();
+
+            for (int i = 1; i <= 10; i++)
             {
-                descripcion = "Asistencia " + i,
-                FechaAsistencia = hoy,
-                Id_persona = 100000000 + i,
-                id_Grupo = "Grupo " + i,
-                ind_asistencia = "Presente"
-            });
+                AsistenciaEst.Add(new Asistencia_Estudiante()
+                {
+                    ProfesorId = 1,
+                    FechaAsistencia = DateTime.Now,
+                    EstudianteId = 100000000 + i,
+                    GrupoId =  i,
+                    Asistencia = 1
+                });
+            }
+        }
+
+        public List<Asistencia_Estudiante> ObtenerAsistenciaEstudiantes()
+        {
+            return AsistenciaEst;
         }
     }
-
-    public List<Asistencia_Estudiante> ObtenerAsistenciaEstudiantes()
-    {
-        return AsistenciaEst;
-    }
-}
 }

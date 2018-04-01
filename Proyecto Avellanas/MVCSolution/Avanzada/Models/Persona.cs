@@ -7,7 +7,7 @@ namespace Avanzada.Models
 {
     public class Persona
     {
-        private int id { get; set; }
+        public int PersonaId { get; set; }
         public string Nombre{ get; set; }
         public string Apellido{ get; set; }
         public string Telefono{ get; set; }
@@ -16,7 +16,6 @@ namespace Avanzada.Models
         public DateTime FechaNacimiento{ get; set; }
         public string Correo{ get; set; }
         public Sexualidad  Sexo{ get; set; }
-
         public enum Sexualidad
         {
             Masculino = 1,
@@ -25,5 +24,7 @@ namespace Avanzada.Models
         }
         public string Usuario{ get; set; }
         public string Contraseña{ get; set; }
+        public ICollection<TipoPersona> Tipo { get; set; }= new List<TipoPersona>();
+        //public Login InicioSesion { get; set; }
     }
 }

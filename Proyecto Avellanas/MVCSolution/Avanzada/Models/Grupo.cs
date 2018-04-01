@@ -7,10 +7,12 @@ namespace Avanzada.Models
 {
     public class Grupo
     {
-      //  public int IdGrupo{ get; set; }
-        public string IdHorario { get; set; }
-        public string Descripcion { get; set; }
-        public string IdCarrera { get; set; }
-        public string IdCurso{ get; set; }
+        public int GrupoId { get; set; }
+        public int Horario { get; set; } //enum o pasar por debajo 
+
+        //foreignkey Curso
+        public int CursoId { get; set; }
+        public Curso Curso { get; set; }
+
     }
 }
