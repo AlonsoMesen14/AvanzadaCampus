@@ -9,9 +9,10 @@ namespace Avanzada.Models.PatternRepository
     {
         private AvanzadaContext context;
 
-        public PersonaDBRepository(AvanzadaContext _context) {
+        public PersonaDBRepository(AvanzadaContext _context)
+        {
             context = _context;
-        } 
+        }
 
         public Persona BuscarPersona(int id)
         {
@@ -37,7 +38,7 @@ namespace Avanzada.Models.PatternRepository
 
         public bool ExistePersona(int id)
         {
-            return context.Personas.Any(p => p.Carne== id);
+            return context.Personas.Any(p => p.Cedula == id);
 
         }
 
@@ -45,5 +46,20 @@ namespace Avanzada.Models.PatternRepository
         {
             return context.Personas.ToList();
         }
+
+        public int ObtenerSexo(string Sexo)
+        {
+            switch (Sexo)
+            {
+                case "Masculino":
+                    return 1;
+                case "Femenino":
+                    return 2;
+                case "Indefinido":
+                    return 3;
+            }
+            return 0;
+        }
     }
 }
+

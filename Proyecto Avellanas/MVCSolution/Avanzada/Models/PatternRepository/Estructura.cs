@@ -58,31 +58,31 @@ namespace Avanzada.Models.PatternRepository
 
         }
 
-        public bool EditarPersona(Persona persona)
-        {
-            if (ExistePersonaCarne(persona.Carne))
-            {
-                Persona a = new Persona();
-                a = personas.Find(e => (e.Carne == persona.Carne));
+        //public bool EditarPersona(Persona persona)
+        //{
+        //    if (ExistePersonaCarne(persona.Carne))
+        //    {
+        //        Persona a = new Persona();
+        //        a = personas.Find(e => (e.Carne == persona.Carne));
 
-                a.Nombre = persona.Nombre;
-                a.Apellido = persona.Apellido;
-                a.Cedula = persona.Cedula;
-                a.Telefono = persona.Telefono;
-                a.Sexo = persona.Sexo;
-                a.FechaNacimiento = persona.FechaNacimiento;
-                a.Contraseña = persona.Contraseña;
-                a.Usuario = persona.Usuario;
-                a.Correo = persona.Correo;
+        //        a.Nombre = persona.Nombre;
+        //        a.Apellido = persona.Apellido;
+        //        a.Cedula = persona.Cedula;
+        //        a.Telefono = persona.Telefono;
+        //        a.Sexo = persona.Sexo;
+        //        a.FechaNacimiento = persona.FechaNacimiento;
+        //        a.Contraseña = persona.Contraseña;
+        //        a.Usuario = persona.Usuario;
+        //        a.Correo = persona.Correo;
 
-                //encuentre la posicio de la persona
-                var index = personas.FindIndex(e => (e.Carne == persona.Carne));
-                personas.RemoveAt(index);
-                personas.Add(a);
-                return true;
-            }
-            return false;
-        }
+        //        //encuentre la posicio de la persona
+        //        var index = personas.FindIndex(e => (e.Carne == persona.Carne));
+        //        personas.RemoveAt(index);
+        //        personas.Add(a);
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         public void InicializarLista()
         {
@@ -106,35 +106,35 @@ namespace Avanzada.Models.PatternRepository
             return grupos;
         }
 
-        public List<Persona> ObtenerPersona()
-        {
-            return personas;
-        }
+        //public List<Persona> ObtenerPersona()
+        //{
+        //    return personas;
+        //}
 
-        public bool ExistePersona(int id)
-        {
-            return personas.Any(a => a.Cedula == id);
-        }
+        //public bool ExistePersona(int id)
+        //{
+        //    return personas.Any(a => a.Cedula == id);
+        //}
 
-        public bool ExistePersonaCarne(int carne)
-        {
-            return personas.Any(a => a.Carne == carne);
-        }
+        //public bool ExistePersonaCarne(int carne)
+        //{
+        //    return personas.Any(a => a.Carne == carne);
+        //}
 
-        public Persona BuscarPersona(int id)
-        {
-            return personas.Find(p => p.Carne == id);
-        }
+        //public Persona BuscarPersona(int id)
+        //{
+        //    return personas.Find(p => p.Carne == id);
+        //}
 
-        public bool EliminarPersona(int id)
-        {
-            if (ExistePersona(id))
-            {
-                personas.Remove(personas.Find(p => p.Cedula == id));
-                return true;
-            }
-            return false;
-        }
+        //public bool EliminarPersona(int id)
+        //{
+        //    if (ExistePersona(id))
+        //    {
+        //        personas.Remove(personas.Find(p => p.Cedula == id));
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         public List<Rubros> ObtenerRubros()
         {

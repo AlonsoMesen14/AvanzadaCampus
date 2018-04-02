@@ -38,14 +38,13 @@ namespace Avanzada.ViewModel.PersonaViewModel
         public string Correo { get; set; }
         [Required(ErrorMessage = "El sexo de la persona es requerido.")]
         [Display(Name = "Sexo")]
-        public List<SelectListItem> Sexo { get; set; }
-        [Required]
+        public String Sexo { get; set; }
+
         public string Usuario { get; set; }
-        [Required]
+
         public string Contraseña { get; set; }
 
-        [Required]
-        public string Sexualidad { get; set; }
+
         public string Title { get; set; }
         public bool ExistePersona { get; set; }
 

@@ -29,7 +29,7 @@ namespace Avanzada
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddScoped<IRepositorioPersona, PersonaMockRepository>();
+            services.AddScoped<IRepositorioPersona, PersonaDBRepository>();
 
             services.AddDbContext<AvanzadaContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))

@@ -130,7 +130,12 @@
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label" asp-for="Sexo">Sexo</label>
-                            <select asp-for="Sexo" class="form-control" asp-items="@Model.Sexo"></select>
+                            <select asp-for="Sexo" class="form-control">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Indefinido</option>
+
+                            </select>
                             <span asp-validation-for="Sexo"></span>
                         </div>
                     </div>

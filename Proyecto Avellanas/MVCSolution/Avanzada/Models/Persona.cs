@@ -15,13 +15,7 @@ namespace Avanzada.Models
         public int Carne { get; set; }
         public DateTime FechaNacimiento{ get; set; }
         public string Correo{ get; set; }
-        public Sexualidad  Sexo{ get; set; }
-        public enum Sexualidad
-        {
-            Masculino = 1,
-            Femenino = 2,
-            Indefinido = 3
-        }
+        public int  Sexo{ get; set; }        
         public string Usuario{ get; set; }
         public string Contraseña{ get; set; }
         public ICollection<TipoPersona> Tipo { get; set; }= new List<TipoPersona>();
