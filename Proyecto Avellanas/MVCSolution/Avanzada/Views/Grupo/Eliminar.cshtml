@@ -1,6 +1,6 @@
-﻿@model Avanzada.ViewModel.PersonaViewModel.EliminarViewModel
+﻿@model Avanzada.ViewModel.GrupoViewModel.EliminarViewModel
 @*@{
-    var persona = new Avanzada.Models.PatternRepository.Estructura();
+    var Grupo = new Avanzada.Models.PatternRepository.Estructura();
 }*@
 
 @{
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <span class="fa fa-user"></span> Persona
+                    <span class="fa fa-user"></span> Grupo
                 </a>
             </div>
 
@@ -45,11 +45,11 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a asp-controller="Persona" asp-action="Crear">Agregar</a></li>
+                            <li><a asp-controller="Grupo" asp-action="Crear">Agregar</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a asp-controller="Persona" asp-action="Editar">Editar</a></li>
+                            <li><a asp-controller="Grupo" asp-action="Editar">Editar</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a asp-controller="Persona" asp-action="Eliminar">Eliminar</a></li>
+                            <li><a asp-controller="Grupo" asp-action="Eliminar">Eliminar</a></li>
 
                         </ul>
                     </li>
@@ -78,105 +78,25 @@
 
         <div class="container">
 
-            <form method="post" action="/Persona/Eliminar/">
-                <fieldset>
+            <form method="post" action="/Grupo/Eliminar/">
+				<fieldset>
 
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
+					<div class="form-group">
+						<div class="col-md-6">
+							<label class="control-label" asp-for="GrupoId">Código de Grupo</label>
+							<input asp-for="GrupoId" class="form-control" placeholder="Grupo 1" type="text">
+							<span asp-validation-for="GrupoId"></span>
+						</div>
+					</div>
 
-                                <label class="control-label" asp-for="Carne">Carne</label>
-                                <input asp-for="Carne" class="form-control" placeholder="201801110256" id="carne" type="number">
-                                <span asp-validation-for="Carne"></span>
-                                
-
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <input type="button" name="btn_buscar" class="btn_buscar" value="Buscar">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="control-label" asp-for="Nombre">Nombre</label>
-                                <input asp-for="Nombre" class="form-control" placeholder="Jon" type="text">
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <label class="control-label" asp-for="Apellido">Apellido</label>
-                                    <input asp-for="Apellido" class="form-control" placeholder="Doe" type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="control-label" asp-for="Telefono">Telefono</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">+506</span>
-                                    <input asp-for="Telefono" class="form-control" placeholder="12345678" type="number">
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <label class="control-label" asp-for="Cedula">Cedula</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">ID</span>
-                                        <input asp-for="Cedula" class="form-control" placeholder="000000000" type="number">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="control-label" asp-for="FechaNacimiento">Fecha nacimiento</label>
-                                <input type="date" asp-for="FechaNacimiento" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-4">
-                                    <label class="control-label" asp-for="Correo">Correo</label>
-                                    <input asp-for="Correo" class="form-control" placeholder="ejemplo@org.com" type="email">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-4">
-                                <label class="control-label" for="sexo">Sexo</label>
-                                <select class="form-control" name="sexo">
-                                    <option selected>Seleccione el sexo</option>
-                                    <option value="1">Masculino</option>
-                                    <option value="2">Femenino</option>
-                                    <option value="3">Indefinido</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
+					<div class="form-group">
+						<div class="col-md-6">
+							<label class="control-label" asp-for="Horario">Nombre de la Grupo</label>
+							<input asp-for="Horario" class="form-control" placeholder="Doe" type="text">
+							<span asp-validation-for="Horario"></span>
+						</div>
+					</div>
+				</fieldset>
 
                 @*<div class="form-group">
                         <div class="row">

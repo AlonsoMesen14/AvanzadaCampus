@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Avanzada.Models.PatternRepository
 {
     public class Estructura : IRepositorioGrupo, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros,
-        IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota, IRepositorioAsistencia_Estudiante
+        IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota, IRepositorioAsistencia_Estudiante,
+		IRepositorioCarrera
 	{
         private List<Grupo> grupos;
         private List<Persona> personas;
