@@ -5,8 +5,14 @@ using System.Threading.Tasks;
 
 namespace Avanzada.Models.PatternRepository
 {
-    interface IRepositorioGrupo
-    {
-        List<Grupo> ObtenerGrupo();
-    }
+	public interface IRepositorioGrupo
+	{
+		List<Grupo> ObtenerGrupo();
+		bool CrearGrupo(Grupo Grupo);
+		bool EditarGrupo(Grupo Grupo);
+		bool EliminarGrupo(int id);
+		Grupo BuscarGrupo(int id);
+		bool ExisteGrupo(int id);
+	}
+
 }

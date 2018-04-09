@@ -10,10 +10,11 @@ namespace Avanzada.ViewModel.CarreraViewModel
 {
     public class CrearViewModel
     {
+
         
         [Required(ErrorMessage = "Código de Carrera requerido.")]
         [Display(Name = "Codigo")]
-        public string id { get; set; }
+        public int id { get; set; }
 
         [Required(ErrorMessage = "Nombre de carrera requerido.")]
         [Display(Name = "Nombre Carrera")]
@@ -24,5 +25,6 @@ namespace Avanzada.ViewModel.CarreraViewModel
 		//public ICollection<TipoPersona_Carreras> Carreras { get; set; } = new List<TipoPersona_Carreras>();
 
 		public string Title { get; set; }
+		public bool ExisteCarrera { get; set; }
 	}
 }

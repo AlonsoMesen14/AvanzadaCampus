@@ -8,7 +8,7 @@ namespace Avanzada.Models.PatternRepository
 {
     public class Estructura : IRepositorioGrupo, IRepositorioMatricula, IRepositorioPreMatricula, IRepositorioRubros,
         IRepositorioCurso, IRepositorioPerfil, IRepositorioInicioSesion, IRepositorioNota, IRepositorioAsistencia_Estudiante
-    {
+	{
         private List<Grupo> grupos;
         private List<Persona> personas;
         private List<Notas> notas;
@@ -248,5 +248,60 @@ namespace Avanzada.Models.PatternRepository
         {
             return AsistenciaEst;
         }
-    }
+
+		public bool CrearGrupo(Grupo Grupo)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool EditarGrupo(Grupo Grupo)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool EliminarGrupo(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Grupo BuscarGrupo(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool ExisteGrupo(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Carreras> ObtenerCarrera()
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool CrearCarrera(Carreras carrera)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool EditarCarrera(Carreras carrera)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool EliminarCarrera(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Carreras BuscarCarrera(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool ExisteCarrera(int id)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

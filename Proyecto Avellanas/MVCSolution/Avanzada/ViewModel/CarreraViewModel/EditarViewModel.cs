@@ -5,48 +5,26 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Avanzada.ViewModel.CarrearaViewModel
+namespace Avanzada.ViewModel.CarreraViewModel
 {
     public class EditarViewModel
     {
 
-        [Required(ErrorMessage = "El nombre de la Carreara es requerido.")]
-        [Display(Name = "Nombre")]
-        public string Nombre { get; set; }
+		[Required(ErrorMessage = "Código de Carrera requerido.")]
+		[Display(Name = "Codigo")]
+		public int id { get; set; }
 
-        [Required(ErrorMessage = "El apellido de la Carreara es requerido.")]
-        [Display(Name = "Apellido")]
-        public string Apellido { get; set; }
+		[Required(ErrorMessage = "Nombre de carrera requerido.")]
+		[Display(Name = "Nombre Carrera")]
+		public string Nombre_Carrera { get; set; }
 
-        [Required(ErrorMessage = "El telefono de la Carreara es requerido.")]
-        [Display(Name = "Telefono")]
-        public string Telefono { get; set; }
+		//public Models.TipoPersona_Carreras Persona { get; set; } = new List<TipoPersona_Carreras>();
 
-        [Required(ErrorMessage = "La cedula de la Carreara es requerida.")]
-        [Display(Name = "Cedula")]
-        public int Cedula { get; set; }
+		//public ICollection<TipoPersona_Carreras> Carreras { get; set; } = new List<TipoPersona_Carreras>();
 
-        [Required(ErrorMessage = "El carne de la Carreara es requerido.")]
-        [Display(Name = "Carne")]
-        public int Carne { get; set; }
-        [Required(ErrorMessage = "La fecha de nacimiento de la Carreara es requerida.")]
-        [Display(Name = "Fecha Nacimiento")]
-        public DateTime FechaNacimiento { get; set; }
-
-        [Required(ErrorMessage = "El correo de la Carreara es requerido.")]
-        [Display(Name = "Correo")]
-        public string Correo { get; set; }
-        [Required(ErrorMessage = "El sexo de la Carreara es requerido.")]
-        [Display(Name = "Sexo")]
-        public String Sexo { get; set; }
-
-        public string Usuario { get; set; }
-
-        public string Contraseña { get; set; }
-
-
-        public string Title { get; set; }
-        public bool ExisteCarreara { get; set; }
+		public string Title { get; set; }
+	
+        public bool ExisteCarrera { get; set; }
 
     }
 
