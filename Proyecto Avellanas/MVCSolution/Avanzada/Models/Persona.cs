@@ -18,7 +18,11 @@ namespace Avanzada.Models
         public int  Sexo{ get; set; }        
         public string Usuario{ get; set; }
         public string Contraseña{ get; set; }
-        public ICollection<TipoPersona> Tipo { get; set; }= new List<TipoPersona>();
+        public virtual ICollection<TipoPersona> TipoPersonaId { get; set; }= new List<TipoPersona>();
+        //una persona puede tener muchas carreras asociadas
+        public virtual ICollection<Carreras> CarrerasId { get; set; }= new List<Carreras>();
+         public virtual ICollection<Notas> Notas { get; set; }= new List<Notas>();
+
         //public Login InicioSesion { get; set; }
     }
 }

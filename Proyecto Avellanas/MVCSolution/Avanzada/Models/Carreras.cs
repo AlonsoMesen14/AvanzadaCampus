@@ -7,10 +7,12 @@ namespace Avanzada.Models
 {
     public class Carreras
     {
-        public int Id { get; set; }
+        public int CarreraId { get; set; }
         public string Nombre_Carrera { get; set; }
-       // public ICollection<TipoPersona_Carreras> Personas { get; set; } = new List<TipoPersona_Carreras>();
-       // public ICollection<Carreras_Cursos> Cursos { get; set; } = new List<Carreras_Cursos>();
+
+
+       public virtual ICollection<Persona> Personas { get; set; } = new List<Persona>();
+       public virtual ICollection<Curso> Cursos { get; set; } = new List<Curso>();
 
     }
 }

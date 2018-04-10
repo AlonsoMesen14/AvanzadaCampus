@@ -7,15 +7,15 @@ namespace Avanzada.Models
 {
     public class Notas
     {
-        public string NombreCurso { get; set; }
-        public string CodigoCurso { get; set; }
-        public int Grupo { get; set; }
-        public int Carne { get; set; }
-        public string NombreEstudiante { get; set; }
-        public string NombreCarrera { get; set; }
+
+        public string HistorialId { get; set; }
         public modalidad Modalidad{ get; set; }
+        
+        public virtual ICollection<Curso> Cursos { get; set; } = new List<Curso>();
+        public virtual ICollection<Persona> Persona { get; set; } = new List<Persona>();
+        public virtual ICollection<DetalleNotas> DetalleNotas { get; set; } = new List<DetalleNotas>();
+
         public String Estado { get; set; }
-        public Rubros Rubro { get; set; }
         public DateTime Fecha { get; set; }
         public int Nota { get; set; }
 

@@ -7,9 +7,9 @@ namespace Avanzada.Models
 {
     public class TipoPersona
     {
-        public int Id { get; set; }
+        public int TipoPersonaId { get; set; }
         public Persona PersonaId { get; set; }
         public string Descripcion { get; set; }
-        public ICollection<TipoPersona_Carreras> Carreras { get; set; } = new List<TipoPersona_Carreras>();
+    //    public ICollection<TipoPersona_Carreras> Carreras { get; set; } = new List<TipoPersona_Carreras>();
     }
 }
