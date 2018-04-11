@@ -7,17 +7,33 @@ namespace Avanzada.Models
 {
     public class Matricula
     {
-        public int Id { get; set; }
-        public Carreras Carrera { get; set; }
-        public ICollection<Curso> Cursos { get; set; } = new List<Curso>();
-        public int EstadoCurso { get; set; } //cursando, matriculado, prematriculado
+
+
+        public int MatriculaId { get; set; }
+
+       
+
+        public estado EstadoCurso { get; set; } // matriculado, prematriculado
         public int CreditosMatriculados { get; set; }
         public int Monto { get; set; }
         public int CreditosMaximos { get; }
         // foreign key Matriculando
         public int IDUsuarioMatriculando { get; set; }
         public int IDUsuarioMatriculante { get; set; }
+
+
+        public int PersonaId { get; set; }
         public Persona Persona { get; set; }
+
+        public virtual ICollection<DetallaMatricula> DetallaMatricula { get; set; } = new List<DetallaMatricula>();
+
+
+
+        public enum estado
+        {
+            matriculado = 0,
+            prematriculado = 1
+        }
 
     }
 }

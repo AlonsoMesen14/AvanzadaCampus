@@ -15,7 +15,7 @@ namespace Avanzada.Models
         public string Nombre_Curso { get; set; }
         public int Creditos { get; set; }
         public int Precio { get; set; }
-        public int Estado { get; set; } //aprobado, reprobado, cursando 
+        public estado Estado { get; set; } //aprobado, reprobado, cursando 
         public virtual ICollection<Curso> Curso_Rquerido { get; set; } = new List<Curso>();
 
         public virtual ICollection<Carreras> Carreras { get; set; } = new List<Carreras>();
@@ -23,11 +23,22 @@ namespace Avanzada.Models
         public virtual ICollection<Notas> Notas { get; set; }= new List<Notas>();
         public virtual ICollection<Rubros> Rubros { get; set; }= new List<Rubros>();
 
+        public ICollection<DetallaMatricula> DetallaMatricula { get; set; } = new List<DetallaMatricula>();
 
+
+
+
+        public enum estado
+        {
+            aprobado = 0,
+            reprobado = 1,
+            cursando = 2,
+            //opcional
+           }
         //falta historico
         //falta matricula
         //detalle grupo
-         }
+    }
 
 
 

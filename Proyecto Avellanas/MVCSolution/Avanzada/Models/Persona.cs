@@ -21,8 +21,13 @@ namespace Avanzada.Models
         public virtual ICollection<TipoPersona> TipoPersonaId { get; set; }= new List<TipoPersona>();
         //una persona puede tener muchas carreras asociadas
         public virtual ICollection<Carreras> CarrerasId { get; set; }= new List<Carreras>();
-         public virtual ICollection<Notas> Notas { get; set; }= new List<Notas>();
+        public virtual ICollection<Notas> Notas { get; set; }= new List<Notas>();
 
+        public virtual ICollection<Asistencia_Estudiante> Asistencia_Estudiante { get; set; } = new List<Asistencia_Estudiante>();
+        public virtual ICollection<Asistencia_Profesor> Asistencia_Profesor { get; set; } = new List<Asistencia_Profesor>();
         //public Login InicioSesion { get; set; }
+
+        public ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
     }
 }

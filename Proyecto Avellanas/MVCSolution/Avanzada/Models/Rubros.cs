@@ -12,7 +12,10 @@ namespace Avanzada.Models
         public int RubroId { get; set; }
         public string NombreRubro { get; set; }
         public int Porcentaje { get; set; }
-       
+
+        public virtual ICollection<DetalleNotas> DetalleNotas { get; set; } = new List<DetalleNotas>();
+
+
         //foreign key a curso
         public int CursoId { get; set; }
         public Curso Curso { get; set; }        
